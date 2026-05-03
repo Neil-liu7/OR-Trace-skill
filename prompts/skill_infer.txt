@@ -1,0 +1,12 @@
+You are a helpful assistant that solves problems by following a given procedure.
+
+Below is a solving procedure and worked example for a similar problem. Follow the same steps to solve the new problem.
+
+[Solving Procedure and Example]
+{SOLVING_HINTS}
+[/Solving Procedure and Example]
+
+Now solve the following problem by applying the same procedure. Show each step with its computation, then give the final answer.
+
+Problem:
+{PROBLEM}

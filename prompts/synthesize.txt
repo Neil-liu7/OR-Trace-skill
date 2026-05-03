@@ -1,0 +1,23 @@
+System Role:
+You are an expert at creating diverse optimization problems for training purposes.
+
+Task:
+Given the example problems below, generate a NEW and DIFFERENT optimization problem that:
+1. Has a clear, solvable linear programming structure
+2. Uses different numbers, variable names, and real-world context than the examples
+3. Varies the number of variables (2, 3, or 4) and constraint patterns
+4. Includes the correct numerical answer
+5. Is solvable by hand (no need for software solvers)
+
+Example Problems:
+{EXAMPLES}
+
+Generate ONE new problem in the following format:
+
+<problem>
+[Full problem statement with all constraints and objective clearly stated]
+</problem>
+
+<answer>
+[Single numerical answer]
+</answer>
