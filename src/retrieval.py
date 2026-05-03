@@ -84,3 +84,32 @@ class SkillBank:
                 "skill_text": preferred_skill_text(row),
             })
         return hits
+
+    def adaptive_search(
+        self,
+        query: str,
+        top_k: int,
+        *,
+        min_score: float = 40.0,
+        top1_ratio: float = 1.5,
+        confidence_threshold: float = 50.0,
+        ratio_cutoff: float = 0.7,
+    ) -> list[dict[str, Any]]:
+        raw_hits = self.search(query, top_k)
+        if not raw_hits:
+            return []
+
+        hits = [h for h in raw_hits if h["score"] >= min_score]
+        if not hits:
+            return []
+
+        top1_score = hits[0]["score"]
+
+        if top1_score < confidence_threshold:
+            return []
+
+        if len(hits) >= 2 and top1_score / hits[1]["score"] >= top1_ratio:
+            return hits[:1]
+
+        cutoff = top1_score * ratio_cutoff
+        return [h for h in hits if h["score"] >= cutoff]

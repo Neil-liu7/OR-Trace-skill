@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Step 5: BM25 retrieval + No-Think inference with procedural skills."""
+"""Baseline: No-Think inference without skill retrieval."""
 from __future__ import annotations
 
 import argparse
@@ -12,11 +12,10 @@ import yaml
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 from api import call_llm, now_iso
-from data import answers_match, extract_final_answer, load_jsonl, render_prompt, write_jsonl
-from retrieval import SkillBank
+from data import answers_match, extract_final_answer, load_jsonl, write_jsonl
 
 
-FALLBACK_PROMPT = """You are a helpful assistant that solves problems. Show each step with its computation, then give the final answer.
+BASELINE_PROMPT = """You are a helpful assistant that solves problems. Show each step with its computation, then give the final answer.
 
 Problem:
 {PROBLEM}"""
@@ -25,33 +24,11 @@ Problem:
 async def process_one(
     session: aiohttp.ClientSession,
     item: dict,
-    bank: SkillBank,
-    prompt_template: str,
     cfg: dict,
 ) -> dict:
     ic = cfg["inference"]
     question = item.get("question", "")
-    top_k = ic.get("top_k", 3)
-
-    rc = ic.get("retrieval", {})
-    hits = bank.adaptive_search(
-        question, top_k,
-        min_score=rc.get("min_score", 40.0),
-        top1_ratio=rc.get("top1_ratio", 1.5),
-        confidence_threshold=rc.get("confidence_threshold", 50.0),
-        ratio_cutoff=rc.get("ratio_cutoff", 0.7),
-    )
-
-    if hits:
-        hints = "\n\n---\n\n".join(h["skill_text"] for h in hits)
-        prompt = render_prompt(prompt_template, problem=question, hints=hints)
-        if len(hits) == 1:
-            retrieval_mode = "skill_top1"
-        else:
-            retrieval_mode = "skill_topk"
-    else:
-        prompt = FALLBACK_PROMPT.replace("{PROBLEM}", question)
-        retrieval_mode = "fallback"
+    prompt = BASELINE_PROMPT.replace("{PROBLEM}", question)
 
     enable_thinking = False if ic.get("no_think", True) else None
 
@@ -71,8 +48,7 @@ async def process_one(
         return {
             **item,
             "gen_model": cfg["model"],
-            "mode": "skill_retrieval",
-            "retrieval_mode": retrieval_mode,
+            "mode": "baseline_no_think",
             "status": "error",
             "error": resp.error,
             "timestamp": now_iso(),
@@ -84,8 +60,7 @@ async def process_one(
     return {
         **item,
         "gen_model": cfg["model"],
-        "mode": "skill_retrieval",
-        "retrieval_mode": retrieval_mode,
+        "mode": "baseline_no_think",
         "raw_reasoning": resp.reasoning,
         "raw_model_response": resp.text,
         "predicted_answer": predicted,
@@ -93,9 +68,6 @@ async def process_one(
         "prompt_tokens": resp.prompt_tokens,
         "completion_tokens": resp.completion_tokens,
         "total_tokens": resp.total_tokens,
-        "retrieved_count": len(hits),
-        "retrieved_question_ids": [h["question_id"] for h in hits],
-        "retrieved_scores": [round(h["score"], 4) for h in hits],
         "status": "success",
         "error": "",
         "timestamp": now_iso(),
@@ -108,17 +80,13 @@ async def run(args: argparse.Namespace) -> None:
     rows = load_jsonl(args.input_file)
     if args.limit:
         rows = rows[:args.limit]
-    skills = load_jsonl(args.skill_file)
-    bank = SkillBank(skills)
-    print(f"Loaded {len(bank.records)} skills into retrieval bank")
 
-    prompt_template = Path(args.prompt_file).read_text(encoding="utf-8")
     max_concurrent = cfg["inference"].get("max_concurrent", 8)
     semaphore = asyncio.Semaphore(max_concurrent)
 
     async def guarded(session, item):
         async with semaphore:
-            return await process_one(session, item, bank, prompt_template, cfg)
+            return await process_one(session, item, cfg)
 
     timeout = aiohttp.ClientTimeout(total=None)
     connector = aiohttp.TCPConnector(limit=max_concurrent * 2)
@@ -131,16 +99,10 @@ async def run(args: argparse.Namespace) -> None:
     print(f"Wrote {total} predictions -> {args.output_file}")
     print(f"Accuracy: {correct}/{total} = {correct/total*100:.1f}%")
 
-    from collections import Counter
-    modes = Counter(r.get("retrieval_mode", "unknown") for r in out)
-    print(f"Retrieval modes: {dict(modes)}")
-
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="BM25 retrieval + No-Think inference.")
+    parser = argparse.ArgumentParser(description="Baseline: No-Think without skills.")
     parser.add_argument("input_file", help="Test problems JSONL")
-    parser.add_argument("skill_file", help="Skill library JSONL")
-    parser.add_argument("prompt_file", help="Inference prompt")
     parser.add_argument("output_file", help="Output predictions JSONL")
     parser.add_argument("--config", default="configs/default.yaml")
     parser.add_argument("--limit", type=int)
