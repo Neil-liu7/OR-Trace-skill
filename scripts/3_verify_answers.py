@@ -26,7 +26,7 @@ def main() -> None:
             rejected.append({**row, "reject_reason": "generation_error"})
             continue
 
-        response = row.get("model_response", "")
+        response = row.get("model_response") or row.get("raw_model_response", "")
         predicted = extract_final_answer(response)
         gold = row.get("answer", "")
 

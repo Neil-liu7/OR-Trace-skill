@@ -1,0 +1,36 @@
+api_base_url: http://localhost:8001/v1/chat/completions
+api_key: dummy
+inference:
+  max_concurrent: 8
+  max_retries: 3
+  max_tokens: 8192
+  no_think: true
+  retrieval:
+    confidence_threshold: 0
+    embed_model: BAAI/bge-small-en-v1.5
+    method: structural_hybrid
+    min_score: 0
+    ratio_cutoff: 0
+    rrf_k: 60
+    top1_ratio: 999
+  temperature: 0.1
+  timeout: 600
+  top_k: 2
+model: Qwen3-8B
+skill_distillation:
+  max_concurrent: 8
+  max_retries: 3
+  max_tokens: 4096
+  temperature: 0.3
+  timeout: 300
+synthesis:
+  max_concurrent: 4
+  max_tokens: 4096
+  num_problems_per_seed: 5
+  temperature: 0.8
+trace_generation:
+  max_concurrent: 8
+  max_retries: 3
+  max_tokens: 16384
+  temperature: 0.7
+  timeout: 600

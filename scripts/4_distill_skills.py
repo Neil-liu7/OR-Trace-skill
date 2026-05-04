@@ -19,6 +19,10 @@ def trace_from_item(item: dict) -> str:
     trace = (item.get("reasoning_trace") or "").strip()
     if trace:
         return trace
+    reasoning = (item.get("raw_reasoning") or "").strip()
+    if reasoning:
+        response = (item.get("raw_model_response") or "").strip()
+        return "\n\n".join(part for part in [reasoning, response] if part)
     think = (item.get("model_think") or "").strip()
     response = (item.get("model_response") or "").strip()
     return "\n\n".join(part for part in [think, response] if part)

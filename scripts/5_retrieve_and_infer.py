@@ -34,13 +34,30 @@ async def process_one(
     top_k = ic.get("top_k", 3)
 
     rc = ic.get("retrieval", {})
-    hits = bank.adaptive_search(
-        question, top_k,
-        min_score=rc.get("min_score", 40.0),
-        top1_ratio=rc.get("top1_ratio", 1.5),
-        confidence_threshold=rc.get("confidence_threshold", 50.0),
-        ratio_cutoff=rc.get("ratio_cutoff", 0.7),
-    )
+    search_method = rc.get("method", "bm25")
+
+    if search_method == "structural":
+        hits = bank.structural_search(question, top_k)
+    elif search_method == "adaptive":
+        hits = bank.adaptive_search(
+            question, top_k,
+            min_score=rc.get("min_score", 40.0),
+            top1_ratio=rc.get("top1_ratio", 1.5),
+            confidence_threshold=rc.get("confidence_threshold", 50.0),
+            ratio_cutoff=rc.get("ratio_cutoff", 0.7),
+        )
+    elif search_method == "hybrid":
+        hits = bank.hybrid_search(
+            question, top_k,
+            rrf_k=rc.get("rrf_k", 60),
+        )
+    elif search_method == "structural_hybrid":
+        hits = bank.structural_hybrid_search(
+            question, top_k,
+            rrf_k=rc.get("rrf_k", 60),
+        )
+    else:
+        hits = bank.search(question, top_k)
 
     if hits:
         hints = "\n\n---\n\n".join(h["skill_text"] for h in hits)
@@ -109,7 +126,9 @@ async def run(args: argparse.Namespace) -> None:
     if args.limit:
         rows = rows[:args.limit]
     skills = load_jsonl(args.skill_file)
-    bank = SkillBank(skills)
+    rc = cfg["inference"].get("retrieval", {})
+    embed_model = rc.get("embed_model") if rc.get("method") in ("hybrid", "structural_hybrid") else None
+    bank = SkillBank(skills, embed_model=embed_model)
     print(f"Loaded {len(bank.records)} skills into retrieval bank")
 
     prompt_template = Path(args.prompt_file).read_text(encoding="utf-8")

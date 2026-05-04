@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(chmod +x scripts/run_5trials_complexlp.sh)",
+      "Bash(HF_HUB_OFFLINE=1 bash scripts/run_5trials_complexlp.sh)"
+    ]
+  }
+}

@@ -1,4 +1,4 @@
-model: "Qwen3-8B"
+model: "/root/paddlejob/workspace/liuaofan/Reasoning-Skill/Model/Qwen3-8B"
 api_base_url: "http://localhost:8001/v1/chat/completions"
 api_key: "dummy"
 
@@ -22,16 +22,24 @@ inference:
   max_concurrent: 8
   max_retries: 3
   timeout: 600
-  top_k: 3
+  top_k: 2
   no_think: true
   retrieval:
-    min_score: 40.0
-    top1_ratio: 1.5
-    confidence_threshold: 50.0
-    ratio_cutoff: 0.7
+    method: structural_hybrid
+    embed_model: BAAI/bge-small-en-v1.5
+    rrf_k: 60
+    min_score: 0
+    top1_ratio: 999
+    confidence_threshold: 0
+    ratio_cutoff: 0
 
 synthesis:
   temperature: 0.8
   max_tokens: 4096
   max_concurrent: 4
   num_problems_per_seed: 5
+
+evolution:
+  rounds: 3
+  keep_strategy: "replace_by_qid"
+  min_improvement: 0.0

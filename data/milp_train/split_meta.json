@@ -1,0 +1,32 @@
+{
+  "seed": 42,
+  "eval_per_type_per_difficulty": 20,
+  "eval_total": 360,
+  "train_total": 3631,
+  "train_primary": 648,
+  "train_extra": 2983,
+  "sources": {
+    "primary": "milp_train_500.jsonl (1008)",
+    "extra": [
+      "milp_rewritten_1000.jsonl",
+      "batch2_ruled_1000.jsonl",
+      "batch2_rewritten_1000.jsonl"
+    ]
+  },
+  "eval_by_type": {
+    "CrewScheduling": 60,
+    "FacilityLocation": 60,
+    "JobShop": 60,
+    "LotSizing": 60,
+    "TSP": 60,
+    "VRP": 60
+  },
+  "train_by_type": {
+    "CrewScheduling": 306,
+    "FacilityLocation": 652,
+    "JobShop": 801,
+    "LotSizing": 543,
+    "TSP": 650,
+    "VRP": 679
+  }
+}

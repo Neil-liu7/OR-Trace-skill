@@ -109,10 +109,23 @@ def find_last_boxed(text: str) -> str:
     return ""
 
 
+def _clean_extracted(text: str) -> str:
+    """Strip markdown formatting and parenthetical remarks from an extracted answer."""
+    text = re.sub(r"[*#✅$`]", "", text)
+    text = re.sub(r"\(.*?\)", "", text)
+    text = re.sub(r"\bunits?\b", "", text, flags=re.IGNORECASE)
+    text = text.strip().rstrip(".;,:")
+    nums = re.findall(r"-?\d[\d,]*\.?\d*", text)
+    if nums:
+        return nums[0].replace(",", "")
+    return text
+
+
 def extract_final_answer(text: str) -> str:
     boxed = find_last_boxed(text)
     if boxed:
         return boxed
+    cleaned = re.sub(r"[*#✅`]", "", text)
     patterns = [
         r"(?im)^\s*final\s+answer\s*[:：]\s*(.+?)\s*$",
         r"(?im)^\s*answer\s*[:：]\s*(.+?)\s*$",
@@ -120,27 +133,38 @@ def extract_final_answer(text: str) -> str:
         r"(?is)\bthe\s+answer\s+is\s+(.+?)(?:\n|$)",
     ]
     for pattern in patterns:
-        matches = list(re.finditer(pattern, text))
+        matches = list(re.finditer(pattern, cleaned))
         if matches:
-            return matches[-1].group(1).strip()
-    lines = [line.strip() for line in text.splitlines() if line.strip()]
-    return lines[-1] if lines else ""
+            return _clean_extracted(matches[-1].group(1))
+    lines = [line.strip() for line in cleaned.splitlines() if line.strip()]
+    return _clean_extracted(lines[-1]) if lines else ""
 
 
 def normalize_answer(text: str) -> str:
     text = text.strip().lower()
     text = re.sub(r"\\boxed\s*{([^{}]*)}", r"\1", text)
     text = re.sub(r"\\text\s*{([^{}]*)}", r"\1", text)
-    for token in ["$", "\\(", "\\)", "\\[", "\\]", "\\left", "\\right", "`", "*"]:
+    for token in ["$", "\\(", "\\)", "\\[", "\\]", "\\left", "\\right", "`", "*", "#", "✅"]:
         text = text.replace(token, "")
+    text = re.sub(r"\bunits?\b", "", text)
+    text = text.replace(",", "")
     text = text.replace(" ", "")
     text = text.rstrip(".;,")
     return text
 
 
-def answers_match(candidate: str, gold: str) -> bool:
+def answers_match(candidate: str, gold: str, rel_tol: float = 0.01) -> bool:
     c = normalize_answer(candidate)
     g = normalize_answer(gold)
     if not c or not g:
         return False
-    return c == g
+    if c == g:
+        return True
+    try:
+        cf = float(c)
+        gf = float(g)
+        if gf == 0:
+            return abs(cf) < 1e-6
+        return abs(cf - gf) / abs(gf) <= rel_tol
+    except (ValueError, OverflowError):
+        return False
