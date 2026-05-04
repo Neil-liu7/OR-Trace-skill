@@ -18,7 +18,7 @@ skill_distillation:
 
 inference:
   temperature: 0.0
-  max_tokens: 8192
+  max_tokens: 16384
   max_concurrent: 8
   max_retries: 3
   timeout: 600

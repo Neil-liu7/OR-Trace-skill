@@ -109,7 +109,8 @@ async def process_one(
     if resp.status != "success":
         return {**item, "gen_model": cfg["model"], "mode": "skill_prompt", "status": "error", "error": resp.error, "timestamp": now_iso()}
 
-    predicted = extract_final_answer(resp.text)
+    full_text = resp.text or resp.reasoning
+    predicted = extract_final_answer(full_text)
     gold = item.get("answer", "")
 
     return {

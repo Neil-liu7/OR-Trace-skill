@@ -125,6 +125,22 @@ def extract_final_answer(text: str) -> str:
     boxed = find_last_boxed(text)
     if boxed:
         return boxed
+
+    # Bold number near end: **$173** or **173**
+    bold_nums = list(re.finditer(
+        r"\*\*\s*\$?\s*(-?\d[\d,]*\.?\d*)\s*\*\*", text,
+    ))
+    # "Answer: $173" with optional markdown
+    answer_nums = list(re.finditer(
+        r"(?:final\s+)?answer\s*[:：]\s*\$?\s*(-?\d[\d,]*\.?\d*)",
+        text, re.IGNORECASE,
+    ))
+
+    if answer_nums:
+        return answer_nums[-1].group(1).replace(",", "")
+    if bold_nums:
+        return bold_nums[-1].group(1).replace(",", "")
+
     cleaned = re.sub(r"[*#✅`]", "", text)
     patterns = [
         r"(?im)^\s*final\s+answer\s*[:：]\s*(.+?)\s*$",

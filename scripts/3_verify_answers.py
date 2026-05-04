@@ -28,6 +28,10 @@ def main() -> None:
 
         response = row.get("model_response") or row.get("raw_model_response", "")
         predicted = extract_final_answer(response)
+        if not predicted:
+            reasoning = row.get("model_think") or row.get("raw_reasoning", "")
+            if reasoning:
+                predicted = extract_final_answer(reasoning)
         gold = row.get("answer", "")
 
         row["predicted_answer"] = predicted

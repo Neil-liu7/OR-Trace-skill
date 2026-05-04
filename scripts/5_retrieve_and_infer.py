@@ -96,6 +96,8 @@ async def process_one(
         }
 
     predicted = extract_final_answer(resp.text)
+    if not predicted and resp.reasoning:
+        predicted = extract_final_answer(resp.reasoning)
     gold = item.get("answer", "")
 
     return {
