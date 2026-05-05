@@ -1,0 +1,723 @@
+{
+  "original_count": 93,
+  "success_count": 80,
+  "after_filter": 76,
+  "after_merge": 14,
+  "removed_count": 17,
+  "removal_reasons": {
+    "extraction_failed": 13,
+    "high_freq_useless": 4
+  },
+  "metrics": {
+    "MAMO_ComplexLP_fixed_0138": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_ComplexLP_fixed_0169": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_ComplexLP_fixed_0094": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_ComplexLP_fixed_0095": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_ComplexLP_fixed_0036": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_ComplexLP_fixed_0105": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_ComplexLP_fixed_0051": {
+      "retrieval_count": 11,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_ComplexLP_fixed_0114": {
+      "retrieval_count": 3,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_ComplexLP_fixed_0173": {
+      "retrieval_count": 1,
+      "help_count": 1,
+      "hurt_count": 0,
+      "net_help_rate": 1.0,
+      "hurt_rate": 0.0,
+      "net_score": 1.0
+    },
+    "MAMO_ComplexLP_fixed_0123": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_ComplexLP_fixed_0002": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_ComplexLP_fixed_0025": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_ComplexLP_fixed_0024": {
+      "retrieval_count": 7,
+      "help_count": 2,
+      "hurt_count": 0,
+      "net_help_rate": 0.2857142857142857,
+      "hurt_rate": 0.0,
+      "net_score": 0.2857142857142857
+    },
+    "MAMO_ComplexLP_fixed_0060": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_ComplexLP_fixed_0104": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_ComplexLP_fixed_0103": {
+      "retrieval_count": 3,
+      "help_count": 1,
+      "hurt_count": 0,
+      "net_help_rate": 0.3333333333333333,
+      "hurt_rate": 0.0,
+      "net_score": 0.3333333333333333
+    },
+    "MAMO_ComplexLP_fixed_0077": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_ComplexLP_fixed_0132": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_ComplexLP_fixed_0064": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_ComplexLP_fixed_0134": {
+      "retrieval_count": 2,
+      "help_count": 1,
+      "hurt_count": 0,
+      "net_help_rate": 0.5,
+      "hurt_rate": 0.0,
+      "net_score": 0.5
+    },
+    "MAMO_ComplexLP_fixed_0178": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_ComplexLP_fixed_0099": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_ComplexLP_fixed_0102": {
+      "retrieval_count": 3,
+      "help_count": 1,
+      "hurt_count": 0,
+      "net_help_rate": 0.3333333333333333,
+      "hurt_rate": 0.0,
+      "net_score": 0.3333333333333333
+    },
+    "MAMO_ComplexLP_fixed_0023": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_ComplexLP_fixed_0177": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_ComplexLP_fixed_0135": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_ComplexLP_fixed_0115": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_ComplexLP_fixed_0184": {
+      "retrieval_count": 4,
+      "help_count": 1,
+      "hurt_count": 0,
+      "net_help_rate": 0.25,
+      "hurt_rate": 0.0,
+      "net_score": 0.25
+    },
+    "MAMO_ComplexLP_fixed_0087": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_ComplexLP_fixed_0092": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_ComplexLP_fixed_0144": {
+      "retrieval_count": 4,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_ComplexLP_fixed_0148": {
+      "retrieval_count": 4,
+      "help_count": 1,
+      "hurt_count": 0,
+      "net_help_rate": 0.25,
+      "hurt_rate": 0.0,
+      "net_score": 0.25
+    },
+    "MAMO_ComplexLP_fixed_0085": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_ComplexLP_fixed_0161": {
+      "retrieval_count": 17,
+      "help_count": 1,
+      "hurt_count": 1,
+      "net_help_rate": 0.058823529411764705,
+      "hurt_rate": 0.058823529411764705,
+      "net_score": 0.0
+    },
+    "MAMO_ComplexLP_fixed_0056": {
+      "retrieval_count": 4,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_ComplexLP_fixed_0155": {
+      "retrieval_count": 6,
+      "help_count": 3,
+      "hurt_count": 0,
+      "net_help_rate": 0.5,
+      "hurt_rate": 0.0,
+      "net_score": 0.5
+    },
+    "MAMO_ComplexLP_fixed_0059": {
+      "retrieval_count": 4,
+      "help_count": 1,
+      "hurt_count": 1,
+      "net_help_rate": 0.25,
+      "hurt_rate": 0.25,
+      "net_score": 0.0
+    },
+    "MAMO_ComplexLP_fixed_0137": {
+      "retrieval_count": 4,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_ComplexLP_fixed_0045": {
+      "retrieval_count": 4,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_ComplexLP_fixed_0164": {
+      "retrieval_count": 8,
+      "help_count": 3,
+      "hurt_count": 0,
+      "net_help_rate": 0.375,
+      "hurt_rate": 0.0,
+      "net_score": 0.375
+    },
+    "MAMO_ComplexLP_fixed_0027": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_ComplexLP_fixed_0117": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_ComplexLP_fixed_0028": {
+      "retrieval_count": 6,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_ComplexLP_fixed_0129": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_ComplexLP_fixed_0058": {
+      "retrieval_count": 13,
+      "help_count": 2,
+      "hurt_count": 0,
+      "net_help_rate": 0.15384615384615385,
+      "hurt_rate": 0.0,
+      "net_score": 0.15384615384615385
+    },
+    "MAMO_ComplexLP_fixed_0143": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_ComplexLP_fixed_0093": {
+      "retrieval_count": 5,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_ComplexLP_fixed_0021": {
+      "retrieval_count": 12,
+      "help_count": 1,
+      "hurt_count": 0,
+      "net_help_rate": 0.08333333333333333,
+      "hurt_rate": 0.0,
+      "net_score": 0.08333333333333333
+    },
+    "MAMO_ComplexLP_fixed_0116": {
+      "retrieval_count": 2,
+      "help_count": 2,
+      "hurt_count": 0,
+      "net_help_rate": 1.0,
+      "hurt_rate": 0.0,
+      "net_score": 1.0
+    },
+    "MAMO_ComplexLP_fixed_0181": {
+      "retrieval_count": 1,
+      "help_count": 1,
+      "hurt_count": 0,
+      "net_help_rate": 1.0,
+      "hurt_rate": 0.0,
+      "net_score": 1.0
+    },
+    "MAMO_ComplexLP_fixed_0066": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_ComplexLP_fixed_0061": {
+      "retrieval_count": 3,
+      "help_count": 1,
+      "hurt_count": 0,
+      "net_help_rate": 0.3333333333333333,
+      "hurt_rate": 0.0,
+      "net_score": 0.3333333333333333
+    },
+    "MAMO_ComplexLP_fixed_0194": {
+      "retrieval_count": 4,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_ComplexLP_fixed_0071": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_ComplexLP_fixed_0100": {
+      "retrieval_count": 3,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_ComplexLP_fixed_0018": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_ComplexLP_fixed_0120": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_ComplexLP_fixed_0136": {
+      "retrieval_count": 2,
+      "help_count": 1,
+      "hurt_count": 0,
+      "net_help_rate": 0.5,
+      "hurt_rate": 0.0,
+      "net_score": 0.5
+    },
+    "MAMO_ComplexLP_fixed_0124": {
+      "retrieval_count": 9,
+      "help_count": 2,
+      "hurt_count": 0,
+      "net_help_rate": 0.2222222222222222,
+      "hurt_rate": 0.0,
+      "net_score": 0.2222222222222222
+    },
+    "MAMO_ComplexLP_fixed_0158": {
+      "retrieval_count": 3,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_ComplexLP_fixed_0126": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_ComplexLP_fixed_0053": {
+      "retrieval_count": 3,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_ComplexLP_fixed_0031": {
+      "retrieval_count": 8,
+      "help_count": 1,
+      "hurt_count": 0,
+      "net_help_rate": 0.125,
+      "hurt_rate": 0.0,
+      "net_score": 0.125
+    },
+    "MAMO_ComplexLP_fixed_0199": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_ComplexLP_fixed_0035": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_ComplexLP_fixed_0111": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_ComplexLP_fixed_0014": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_ComplexLP_fixed_0091": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_ComplexLP_fixed_0183": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_ComplexLP_fixed_0185": {
+      "retrieval_count": 4,
+      "help_count": 2,
+      "hurt_count": 0,
+      "net_help_rate": 0.5,
+      "hurt_rate": 0.0,
+      "net_score": 0.5
+    },
+    "MAMO_ComplexLP_fixed_0162": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_ComplexLP_fixed_0121": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_ComplexLP_fixed_0157": {
+      "retrieval_count": 4,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_ComplexLP_fixed_0084": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_ComplexLP_fixed_0187": {
+      "retrieval_count": 4,
+      "help_count": 1,
+      "hurt_count": 0,
+      "net_help_rate": 0.25,
+      "hurt_rate": 0.0,
+      "net_score": 0.25
+    },
+    "MAMO_ComplexLP_fixed_0191": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_ComplexLP_fixed_0034": {
+      "retrieval_count": 3,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_ComplexLP_fixed_0076": {
+      "retrieval_count": 5,
+      "help_count": 2,
+      "hurt_count": 0,
+      "net_help_rate": 0.4,
+      "hurt_rate": 0.0,
+      "net_score": 0.4
+    },
+    "MAMO_ComplexLP_fixed_0005": {
+      "retrieval_count": 10,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_ComplexLP_fixed_0172": {
+      "retrieval_count": 3,
+      "help_count": 1,
+      "hurt_count": 0,
+      "net_help_rate": 0.3333333333333333,
+      "hurt_rate": 0.0,
+      "net_score": 0.3333333333333333
+    }
+  },
+  "removed_skills": [
+    {
+      "question_id": "MAMO_ComplexLP_fixed_0004",
+      "reason": "extraction_failed"
+    },
+    {
+      "question_id": "MAMO_ComplexLP_fixed_0005",
+      "reason": "high_freq_useless"
+    },
+    {
+      "question_id": "MAMO_ComplexLP_fixed_0013",
+      "reason": "extraction_failed"
+    },
+    {
+      "question_id": "MAMO_ComplexLP_fixed_0028",
+      "reason": "high_freq_useless"
+    },
+    {
+      "question_id": "MAMO_ComplexLP_fixed_0032",
+      "reason": "extraction_failed"
+    },
+    {
+      "question_id": "MAMO_ComplexLP_fixed_0040",
+      "reason": "extraction_failed"
+    },
+    {
+      "question_id": "MAMO_ComplexLP_fixed_0043",
+      "reason": "extraction_failed"
+    },
+    {
+      "question_id": "MAMO_ComplexLP_fixed_0051",
+      "reason": "high_freq_useless"
+    },
+    {
+      "question_id": "MAMO_ComplexLP_fixed_0090",
+      "reason": "extraction_failed"
+    },
+    {
+      "question_id": "MAMO_ComplexLP_fixed_0093",
+      "reason": "high_freq_useless"
+    },
+    {
+      "question_id": "MAMO_ComplexLP_fixed_0110",
+      "reason": "extraction_failed"
+    },
+    {
+      "question_id": "MAMO_ComplexLP_fixed_0122",
+      "reason": "extraction_failed"
+    },
+    {
+      "question_id": "MAMO_ComplexLP_fixed_0125",
+      "reason": "extraction_failed"
+    },
+    {
+      "question_id": "MAMO_ComplexLP_fixed_0127",
+      "reason": "extraction_failed"
+    },
+    {
+      "question_id": "MAMO_ComplexLP_fixed_0141",
+      "reason": "extraction_failed"
+    },
+    {
+      "question_id": "MAMO_ComplexLP_fixed_0147",
+      "reason": "extraction_failed"
+    },
+    {
+      "question_id": "MAMO_ComplexLP_fixed_0156",
+      "reason": "extraction_failed"
+    }
+  ]
+}
