@@ -32,6 +32,7 @@ async def process_one(
     ic = cfg["inference"]
     question = item.get("question", "")
     top_k = ic.get("top_k", 3)
+    exclude_self = ic.get("exclude_self", False)
 
     rc = ic.get("retrieval", {})
     search_method = rc.get("method", "bm25")
@@ -58,6 +59,11 @@ async def process_one(
         )
     else:
         hits = bank.search(question, top_k)
+
+    # Leave-one-out: exclude the skill derived from this question itself
+    if exclude_self:
+        own_id = item.get("question_id", "")
+        hits = [h for h in hits if h["question_id"] != own_id]
 
     if hits:
         hints = "\n\n---\n\n".join(h["skill_text"] for h in hits)
