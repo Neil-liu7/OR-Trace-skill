@@ -1,0 +1,308 @@
+{
+  "original_count": 28,
+  "success_count": 26,
+  "after_filter": 7,
+  "after_merge": 5,
+  "removed_count": 21,
+  "removal_reasons": {
+    "high_freq_useless": 11,
+    "negative_net_score": 8,
+    "extraction_failed": 2
+  },
+  "metrics": {
+    "OptMATH_Bench_166_0003": {
+      "retrieval_count": 28,
+      "help_count": 0,
+      "hurt_count": 2,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.07142857142857142,
+      "net_score": -0.07142857142857142
+    },
+    "OptMATH_Bench_166_0022": {
+      "retrieval_count": 7,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "OptMATH_Bench_166_0005": {
+      "retrieval_count": 8,
+      "help_count": 0,
+      "hurt_count": 1,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.125,
+      "net_score": -0.125
+    },
+    "OptMATH_Bench_166_0036": {
+      "retrieval_count": 13,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "OptMATH_Bench_166_0145": {
+      "retrieval_count": 6,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "OptMATH_Bench_166_0002": {
+      "retrieval_count": 11,
+      "help_count": 0,
+      "hurt_count": 1,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.09090909090909091,
+      "net_score": -0.09090909090909091
+    },
+    "OptMATH_Bench_166_0063": {
+      "retrieval_count": 7,
+      "help_count": 0,
+      "hurt_count": 1,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.14285714285714285,
+      "net_score": -0.14285714285714285
+    },
+    "OptMATH_Bench_166_0017": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "OptMATH_Bench_166_0132": {
+      "retrieval_count": 20,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "OptMATH_Bench_166_0029": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 1,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.5,
+      "net_score": -0.5
+    },
+    "OptMATH_Bench_166_0039": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "OptMATH_Bench_166_0015": {
+      "retrieval_count": 3,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "OptMATH_Bench_166_0119": {
+      "retrieval_count": 21,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "OptMATH_Bench_166_0007": {
+      "retrieval_count": 3,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "OptMATH_Bench_166_0150": {
+      "retrieval_count": 16,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "OptMATH_Bench_166_0058": {
+      "retrieval_count": 3,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "OptMATH_Bench_166_0013": {
+      "retrieval_count": 6,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "OptMATH_Bench_166_0140": {
+      "retrieval_count": 20,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "OptMATH_Bench_166_0152": {
+      "retrieval_count": 5,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "OptMATH_Bench_166_0025": {
+      "retrieval_count": 29,
+      "help_count": 1,
+      "hurt_count": 2,
+      "net_help_rate": 0.034482758620689655,
+      "hurt_rate": 0.06896551724137931,
+      "net_score": -0.034482758620689655
+    },
+    "OptMATH_Bench_166_0053": {
+      "retrieval_count": 31,
+      "help_count": 1,
+      "hurt_count": 2,
+      "net_help_rate": 0.03225806451612903,
+      "hurt_rate": 0.06451612903225806,
+      "net_score": -0.03225806451612903
+    },
+    "OptMATH_Bench_166_0090": {
+      "retrieval_count": 8,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "OptMATH_Bench_166_0124": {
+      "retrieval_count": 3,
+      "help_count": 1,
+      "hurt_count": 1,
+      "net_help_rate": 0.3333333333333333,
+      "hurt_rate": 0.3333333333333333,
+      "net_score": 0.0
+    },
+    "OptMATH_Bench_166_0033": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "OptMATH_Bench_166_0001": {
+      "retrieval_count": 6,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "OptMATH_Bench_166_0084": {
+      "retrieval_count": 32,
+      "help_count": 1,
+      "hurt_count": 2,
+      "net_help_rate": 0.03125,
+      "hurt_rate": 0.0625,
+      "net_score": -0.03125
+    }
+  },
+  "removed_skills": [
+    {
+      "question_id": "OptMATH_Bench_166_0001",
+      "reason": "high_freq_useless"
+    },
+    {
+      "question_id": "OptMATH_Bench_166_0002",
+      "reason": "negative_net_score"
+    },
+    {
+      "question_id": "OptMATH_Bench_166_0003",
+      "reason": "negative_net_score"
+    },
+    {
+      "question_id": "OptMATH_Bench_166_0005",
+      "reason": "negative_net_score"
+    },
+    {
+      "question_id": "OptMATH_Bench_166_0013",
+      "reason": "high_freq_useless"
+    },
+    {
+      "question_id": "OptMATH_Bench_166_0022",
+      "reason": "high_freq_useless"
+    },
+    {
+      "question_id": "OptMATH_Bench_166_0025",
+      "reason": "negative_net_score"
+    },
+    {
+      "question_id": "OptMATH_Bench_166_0029",
+      "reason": "negative_net_score"
+    },
+    {
+      "question_id": "OptMATH_Bench_166_0036",
+      "reason": "high_freq_useless"
+    },
+    {
+      "question_id": "OptMATH_Bench_166_0053",
+      "reason": "negative_net_score"
+    },
+    {
+      "question_id": "OptMATH_Bench_166_0063",
+      "reason": "negative_net_score"
+    },
+    {
+      "question_id": "OptMATH_Bench_166_0065",
+      "reason": "extraction_failed"
+    },
+    {
+      "question_id": "OptMATH_Bench_166_0084",
+      "reason": "negative_net_score"
+    },
+    {
+      "question_id": "OptMATH_Bench_166_0090",
+      "reason": "high_freq_useless"
+    },
+    {
+      "question_id": "OptMATH_Bench_166_0119",
+      "reason": "high_freq_useless"
+    },
+    {
+      "question_id": "OptMATH_Bench_166_0127",
+      "reason": "extraction_failed"
+    },
+    {
+      "question_id": "OptMATH_Bench_166_0132",
+      "reason": "high_freq_useless"
+    },
+    {
+      "question_id": "OptMATH_Bench_166_0140",
+      "reason": "high_freq_useless"
+    },
+    {
+      "question_id": "OptMATH_Bench_166_0145",
+      "reason": "high_freq_useless"
+    },
+    {
+      "question_id": "OptMATH_Bench_166_0150",
+      "reason": "high_freq_useless"
+    },
+    {
+      "question_id": "OptMATH_Bench_166_0152",
+      "reason": "high_freq_useless"
+    }
+  ]
+}

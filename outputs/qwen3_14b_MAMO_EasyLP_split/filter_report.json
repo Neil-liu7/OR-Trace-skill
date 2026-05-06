@@ -1,0 +1,3136 @@
+{
+  "original_count": 365,
+  "success_count": 352,
+  "after_filter": 289,
+  "after_merge": 29,
+  "removed_count": 76,
+  "removal_reasons": {
+    "negative_net_score": 56,
+    "high_freq_useless": 7,
+    "extraction_failed": 13
+  },
+  "metrics": {
+    "MAMO_EasyLP_fixed_0482": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0049": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0121": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 1,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.5,
+      "net_score": -0.5
+    },
+    "MAMO_EasyLP_fixed_0459": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0248": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0093": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0422": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0045": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0473": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0575": {
+      "retrieval_count": 5,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0531": {
+      "retrieval_count": 3,
+      "help_count": 0,
+      "hurt_count": 1,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.3333333333333333,
+      "net_score": -0.3333333333333333
+    },
+    "MAMO_EasyLP_fixed_0485": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0092": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0349": {
+      "retrieval_count": 5,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0030": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0418": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0360": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 1,
+      "net_help_rate": 0.0,
+      "hurt_rate": 1.0,
+      "net_score": -1.0
+    },
+    "MAMO_EasyLP_fixed_0407": {
+      "retrieval_count": 2,
+      "help_count": 1,
+      "hurt_count": 1,
+      "net_help_rate": 0.5,
+      "hurt_rate": 0.5,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0292": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0169": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0230": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0135": {
+      "retrieval_count": 2,
+      "help_count": 1,
+      "hurt_count": 0,
+      "net_help_rate": 0.5,
+      "hurt_rate": 0.0,
+      "net_score": 0.5
+    },
+    "MAMO_EasyLP_fixed_0356": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0222": {
+      "retrieval_count": 3,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0286": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0405": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0145": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0398": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0423": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 1,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.5,
+      "net_score": -0.5
+    },
+    "MAMO_EasyLP_fixed_0440": {
+      "retrieval_count": 3,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0610": {
+      "retrieval_count": 4,
+      "help_count": 0,
+      "hurt_count": 1,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.25,
+      "net_score": -0.25
+    },
+    "MAMO_EasyLP_fixed_0471": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0320": {
+      "retrieval_count": 3,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0086": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 1,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.5,
+      "net_score": -0.5
+    },
+    "MAMO_EasyLP_fixed_0008": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0364": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0191": {
+      "retrieval_count": 1,
+      "help_count": 1,
+      "hurt_count": 0,
+      "net_help_rate": 1.0,
+      "hurt_rate": 0.0,
+      "net_score": 1.0
+    },
+    "MAMO_EasyLP_fixed_0297": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0306": {
+      "retrieval_count": 3,
+      "help_count": 1,
+      "hurt_count": 0,
+      "net_help_rate": 0.3333333333333333,
+      "hurt_rate": 0.0,
+      "net_score": 0.3333333333333333
+    },
+    "MAMO_EasyLP_fixed_0511": {
+      "retrieval_count": 3,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0177": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0602": {
+      "retrieval_count": 4,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0354": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0559": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0498": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 1,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.5,
+      "net_score": -0.5
+    },
+    "MAMO_EasyLP_fixed_0031": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0628": {
+      "retrieval_count": 4,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0002": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0314": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0246": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 1,
+      "net_help_rate": 0.0,
+      "hurt_rate": 1.0,
+      "net_score": -1.0
+    },
+    "MAMO_EasyLP_fixed_0518": {
+      "retrieval_count": 5,
+      "help_count": 1,
+      "hurt_count": 0,
+      "net_help_rate": 0.2,
+      "hurt_rate": 0.0,
+      "net_score": 0.2
+    },
+    "MAMO_EasyLP_fixed_0158": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0132": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0097": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0600": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0542": {
+      "retrieval_count": 1,
+      "help_count": 1,
+      "hurt_count": 0,
+      "net_help_rate": 1.0,
+      "hurt_rate": 0.0,
+      "net_score": 1.0
+    },
+    "MAMO_EasyLP_fixed_0605": {
+      "retrieval_count": 4,
+      "help_count": 0,
+      "hurt_count": 1,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.25,
+      "net_score": -0.25
+    },
+    "MAMO_EasyLP_fixed_0120": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0317": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 1,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.5,
+      "net_score": -0.5
+    },
+    "MAMO_EasyLP_fixed_0041": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0101": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0150": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0270": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0538": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0340": {
+      "retrieval_count": 3,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0414": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0458": {
+      "retrieval_count": 3,
+      "help_count": 0,
+      "hurt_count": 1,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.3333333333333333,
+      "net_score": -0.3333333333333333
+    },
+    "MAMO_EasyLP_fixed_0325": {
+      "retrieval_count": 11,
+      "help_count": 0,
+      "hurt_count": 2,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.18181818181818182,
+      "net_score": -0.18181818181818182
+    },
+    "MAMO_EasyLP_fixed_0107": {
+      "retrieval_count": 1,
+      "help_count": 1,
+      "hurt_count": 0,
+      "net_help_rate": 1.0,
+      "hurt_rate": 0.0,
+      "net_score": 1.0
+    },
+    "MAMO_EasyLP_fixed_0381": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0302": {
+      "retrieval_count": 1,
+      "help_count": 1,
+      "hurt_count": 0,
+      "net_help_rate": 1.0,
+      "hurt_rate": 0.0,
+      "net_score": 1.0
+    },
+    "MAMO_EasyLP_fixed_0173": {
+      "retrieval_count": 1,
+      "help_count": 1,
+      "hurt_count": 0,
+      "net_help_rate": 1.0,
+      "hurt_rate": 0.0,
+      "net_score": 1.0
+    },
+    "MAMO_EasyLP_fixed_0014": {
+      "retrieval_count": 4,
+      "help_count": 2,
+      "hurt_count": 1,
+      "net_help_rate": 0.5,
+      "hurt_rate": 0.25,
+      "net_score": 0.25
+    },
+    "MAMO_EasyLP_fixed_0497": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0080": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0310": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0119": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0076": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0244": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0138": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 1,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.5,
+      "net_score": -0.5
+    },
+    "MAMO_EasyLP_fixed_0355": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0211": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0396": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0141": {
+      "retrieval_count": 2,
+      "help_count": 1,
+      "hurt_count": 0,
+      "net_help_rate": 0.5,
+      "hurt_rate": 0.0,
+      "net_score": 0.5
+    },
+    "MAMO_EasyLP_fixed_0562": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0295": {
+      "retrieval_count": 3,
+      "help_count": 1,
+      "hurt_count": 0,
+      "net_help_rate": 0.3333333333333333,
+      "hurt_rate": 0.0,
+      "net_score": 0.3333333333333333
+    },
+    "MAMO_EasyLP_fixed_0085": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0308": {
+      "retrieval_count": 2,
+      "help_count": 1,
+      "hurt_count": 0,
+      "net_help_rate": 0.5,
+      "hurt_rate": 0.0,
+      "net_score": 0.5
+    },
+    "MAMO_EasyLP_fixed_0561": {
+      "retrieval_count": 4,
+      "help_count": 0,
+      "hurt_count": 1,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.25,
+      "net_score": -0.25
+    },
+    "MAMO_EasyLP_fixed_0280": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0256": {
+      "retrieval_count": 3,
+      "help_count": 1,
+      "hurt_count": 1,
+      "net_help_rate": 0.3333333333333333,
+      "hurt_rate": 0.3333333333333333,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0159": {
+      "retrieval_count": 2,
+      "help_count": 1,
+      "hurt_count": 0,
+      "net_help_rate": 0.5,
+      "hurt_rate": 0.0,
+      "net_score": 0.5
+    },
+    "MAMO_EasyLP_fixed_0149": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0166": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0526": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0541": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0453": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0352": {
+      "retrieval_count": 7,
+      "help_count": 0,
+      "hurt_count": 1,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.14285714285714285,
+      "net_score": -0.14285714285714285
+    },
+    "MAMO_EasyLP_fixed_0608": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0327": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0178": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 1,
+      "net_help_rate": 0.0,
+      "hurt_rate": 1.0,
+      "net_score": -1.0
+    },
+    "MAMO_EasyLP_fixed_0508": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0279": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0366": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0481": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0373": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0188": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0275": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0465": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0609": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0267": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0087": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 1,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.5,
+      "net_score": -0.5
+    },
+    "MAMO_EasyLP_fixed_0451": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0480": {
+      "retrieval_count": 2,
+      "help_count": 1,
+      "hurt_count": 1,
+      "net_help_rate": 0.5,
+      "hurt_rate": 0.5,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0011": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0348": {
+      "retrieval_count": 3,
+      "help_count": 0,
+      "hurt_count": 1,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.3333333333333333,
+      "net_score": -0.3333333333333333
+    },
+    "MAMO_EasyLP_fixed_0547": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0588": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0238": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 1,
+      "net_help_rate": 0.0,
+      "hurt_rate": 1.0,
+      "net_score": -1.0
+    },
+    "MAMO_EasyLP_fixed_0243": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0269": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0359": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0009": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 1,
+      "net_help_rate": 0.0,
+      "hurt_rate": 1.0,
+      "net_score": -1.0
+    },
+    "MAMO_EasyLP_fixed_0057": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0576": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0075": {
+      "retrieval_count": 2,
+      "help_count": 2,
+      "hurt_count": 0,
+      "net_help_rate": 1.0,
+      "hurt_rate": 0.0,
+      "net_score": 1.0
+    },
+    "MAMO_EasyLP_fixed_0421": {
+      "retrieval_count": 3,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0273": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0088": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 1,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.5,
+      "net_score": -0.5
+    },
+    "MAMO_EasyLP_fixed_0367": {
+      "retrieval_count": 2,
+      "help_count": 1,
+      "hurt_count": 0,
+      "net_help_rate": 0.5,
+      "hurt_rate": 0.0,
+      "net_score": 0.5
+    },
+    "MAMO_EasyLP_fixed_0438": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0332": {
+      "retrieval_count": 4,
+      "help_count": 0,
+      "hurt_count": 1,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.25,
+      "net_score": -0.25
+    },
+    "MAMO_EasyLP_fixed_0640": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 1,
+      "net_help_rate": 0.0,
+      "hurt_rate": 1.0,
+      "net_score": -1.0
+    },
+    "MAMO_EasyLP_fixed_0000": {
+      "retrieval_count": 2,
+      "help_count": 1,
+      "hurt_count": 0,
+      "net_help_rate": 0.5,
+      "hurt_rate": 0.0,
+      "net_score": 0.5
+    },
+    "MAMO_EasyLP_fixed_0083": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 1,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.5,
+      "net_score": -0.5
+    },
+    "MAMO_EasyLP_fixed_0251": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0523": {
+      "retrieval_count": 7,
+      "help_count": 0,
+      "hurt_count": 2,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.2857142857142857,
+      "net_score": -0.2857142857142857
+    },
+    "MAMO_EasyLP_fixed_0549": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0026": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0362": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0090": {
+      "retrieval_count": 3,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0160": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0489": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0343": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0435": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0427": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0265": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0284": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0146": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 1,
+      "net_help_rate": 0.0,
+      "hurt_rate": 1.0,
+      "net_score": -1.0
+    },
+    "MAMO_EasyLP_fixed_0165": {
+      "retrieval_count": 3,
+      "help_count": 0,
+      "hurt_count": 1,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.3333333333333333,
+      "net_score": -0.3333333333333333
+    },
+    "MAMO_EasyLP_fixed_0294": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0391": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0529": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0134": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0336": {
+      "retrieval_count": 8,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0377": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0625": {
+      "retrieval_count": 3,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0333": {
+      "retrieval_count": 5,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0615": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0032": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0361": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0386": {
+      "retrieval_count": 3,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0389": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0100": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 1,
+      "net_help_rate": 0.0,
+      "hurt_rate": 1.0,
+      "net_score": -1.0
+    },
+    "MAMO_EasyLP_fixed_0408": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 1,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.5,
+      "net_score": -0.5
+    },
+    "MAMO_EasyLP_fixed_0598": {
+      "retrieval_count": 6,
+      "help_count": 0,
+      "hurt_count": 2,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.3333333333333333,
+      "net_score": -0.3333333333333333
+    },
+    "MAMO_EasyLP_fixed_0595": {
+      "retrieval_count": 4,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0393": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0079": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0027": {
+      "retrieval_count": 1,
+      "help_count": 1,
+      "hurt_count": 0,
+      "net_help_rate": 1.0,
+      "hurt_rate": 0.0,
+      "net_score": 1.0
+    },
+    "MAMO_EasyLP_fixed_0231": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0028": {
+      "retrieval_count": 2,
+      "help_count": 1,
+      "hurt_count": 0,
+      "net_help_rate": 0.5,
+      "hurt_rate": 0.0,
+      "net_score": 0.5
+    },
+    "MAMO_EasyLP_fixed_0070": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0374": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 1,
+      "net_help_rate": 0.0,
+      "hurt_rate": 1.0,
+      "net_score": -1.0
+    },
+    "MAMO_EasyLP_fixed_0033": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 1,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.5,
+      "net_score": -0.5
+    },
+    "MAMO_EasyLP_fixed_0257": {
+      "retrieval_count": 3,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0466": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0131": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0490": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0429": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0579": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0502": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0184": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0185": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0151": {
+      "retrieval_count": 3,
+      "help_count": 1,
+      "hurt_count": 0,
+      "net_help_rate": 0.3333333333333333,
+      "hurt_rate": 0.0,
+      "net_score": 0.3333333333333333
+    },
+    "MAMO_EasyLP_fixed_0239": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0412": {
+      "retrieval_count": 5,
+      "help_count": 0,
+      "hurt_count": 2,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.4,
+      "net_score": -0.4
+    },
+    "MAMO_EasyLP_fixed_0322": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0124": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0515": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 1,
+      "net_help_rate": 0.0,
+      "hurt_rate": 1.0,
+      "net_score": -1.0
+    },
+    "MAMO_EasyLP_fixed_0171": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0477": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0620": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0044": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 1,
+      "net_help_rate": 0.0,
+      "hurt_rate": 1.0,
+      "net_score": -1.0
+    },
+    "MAMO_EasyLP_fixed_0488": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0551": {
+      "retrieval_count": 1,
+      "help_count": 1,
+      "hurt_count": 0,
+      "net_help_rate": 1.0,
+      "hurt_rate": 0.0,
+      "net_score": 1.0
+    },
+    "MAMO_EasyLP_fixed_0065": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0463": {
+      "retrieval_count": 1,
+      "help_count": 1,
+      "hurt_count": 0,
+      "net_help_rate": 1.0,
+      "hurt_rate": 0.0,
+      "net_score": 1.0
+    },
+    "MAMO_EasyLP_fixed_0290": {
+      "retrieval_count": 3,
+      "help_count": 1,
+      "hurt_count": 1,
+      "net_help_rate": 0.3333333333333333,
+      "hurt_rate": 0.3333333333333333,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0616": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0564": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0512": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0353": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0519": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0095": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0478": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0301": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0411": {
+      "retrieval_count": 3,
+      "help_count": 0,
+      "hurt_count": 3,
+      "net_help_rate": 0.0,
+      "hurt_rate": 1.0,
+      "net_score": -1.0
+    },
+    "MAMO_EasyLP_fixed_0110": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0486": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0060": {
+      "retrieval_count": 1,
+      "help_count": 1,
+      "hurt_count": 0,
+      "net_help_rate": 1.0,
+      "hurt_rate": 0.0,
+      "net_score": 1.0
+    },
+    "MAMO_EasyLP_fixed_0621": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0632": {
+      "retrieval_count": 3,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0426": {
+      "retrieval_count": 4,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0179": {
+      "retrieval_count": 5,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0415": {
+      "retrieval_count": 3,
+      "help_count": 0,
+      "hurt_count": 1,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.3333333333333333,
+      "net_score": -0.3333333333333333
+    },
+    "MAMO_EasyLP_fixed_0543": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0633": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0338": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0024": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0514": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0449": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0021": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0233": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0513": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 1,
+      "net_help_rate": 0.0,
+      "hurt_rate": 1.0,
+      "net_score": -1.0
+    },
+    "MAMO_EasyLP_fixed_0567": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0091": {
+      "retrieval_count": 2,
+      "help_count": 1,
+      "hurt_count": 1,
+      "net_help_rate": 0.5,
+      "hurt_rate": 0.5,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0446": {
+      "retrieval_count": 1,
+      "help_count": 1,
+      "hurt_count": 0,
+      "net_help_rate": 1.0,
+      "hurt_rate": 0.0,
+      "net_score": 1.0
+    },
+    "MAMO_EasyLP_fixed_0443": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0612": {
+      "retrieval_count": 3,
+      "help_count": 1,
+      "hurt_count": 0,
+      "net_help_rate": 0.3333333333333333,
+      "hurt_rate": 0.0,
+      "net_score": 0.3333333333333333
+    },
+    "MAMO_EasyLP_fixed_0224": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0015": {
+      "retrieval_count": 2,
+      "help_count": 1,
+      "hurt_count": 0,
+      "net_help_rate": 0.5,
+      "hurt_rate": 0.0,
+      "net_score": 0.5
+    },
+    "MAMO_EasyLP_fixed_0623": {
+      "retrieval_count": 2,
+      "help_count": 1,
+      "hurt_count": 0,
+      "net_help_rate": 0.5,
+      "hurt_rate": 0.0,
+      "net_score": 0.5
+    },
+    "MAMO_EasyLP_fixed_0258": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0202": {
+      "retrieval_count": 2,
+      "help_count": 1,
+      "hurt_count": 0,
+      "net_help_rate": 0.5,
+      "hurt_rate": 0.0,
+      "net_score": 0.5
+    },
+    "MAMO_EasyLP_fixed_0369": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0550": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0448": {
+      "retrieval_count": 2,
+      "help_count": 1,
+      "hurt_count": 0,
+      "net_help_rate": 0.5,
+      "hurt_rate": 0.0,
+      "net_score": 0.5
+    },
+    "MAMO_EasyLP_fixed_0094": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0323": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0066": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 1,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.5,
+      "net_score": -0.5
+    },
+    "MAMO_EasyLP_fixed_0503": {
+      "retrieval_count": 5,
+      "help_count": 1,
+      "hurt_count": 1,
+      "net_help_rate": 0.2,
+      "hurt_rate": 0.2,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0055": {
+      "retrieval_count": 1,
+      "help_count": 1,
+      "hurt_count": 0,
+      "net_help_rate": 1.0,
+      "hurt_rate": 0.0,
+      "net_score": 1.0
+    },
+    "MAMO_EasyLP_fixed_0013": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0634": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0499": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0554": {
+      "retrieval_count": 3,
+      "help_count": 1,
+      "hurt_count": 1,
+      "net_help_rate": 0.3333333333333333,
+      "hurt_rate": 0.3333333333333333,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0582": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0156": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0264": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 1,
+      "net_help_rate": 0.0,
+      "hurt_rate": 1.0,
+      "net_score": -1.0
+    },
+    "MAMO_EasyLP_fixed_0129": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0604": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 1,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.5,
+      "net_score": -0.5
+    },
+    "MAMO_EasyLP_fixed_0492": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0535": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0077": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0115": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 1,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.5,
+      "net_score": -0.5
+    },
+    "MAMO_EasyLP_fixed_0337": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0235": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0395": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0183": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0155": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0048": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0136": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0253": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0430": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0111": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0536": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0585": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0592": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0266": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0406": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0282": {
+      "retrieval_count": 3,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0447": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0125": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0084": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0462": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0384": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0357": {
+      "retrieval_count": 3,
+      "help_count": 1,
+      "hurt_count": 0,
+      "net_help_rate": 0.3333333333333333,
+      "hurt_rate": 0.0,
+      "net_score": 0.3333333333333333
+    },
+    "MAMO_EasyLP_fixed_0312": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0606": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0611": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0370": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0504": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 1,
+      "net_help_rate": 0.0,
+      "hurt_rate": 1.0,
+      "net_score": -1.0
+    },
+    "MAMO_EasyLP_fixed_0586": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0365": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0450": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0261": {
+      "retrieval_count": 2,
+      "help_count": 1,
+      "hurt_count": 0,
+      "net_help_rate": 0.5,
+      "hurt_rate": 0.0,
+      "net_score": 0.5
+    },
+    "MAMO_EasyLP_fixed_0281": {
+      "retrieval_count": 2,
+      "help_count": 1,
+      "hurt_count": 0,
+      "net_help_rate": 0.5,
+      "hurt_rate": 0.0,
+      "net_score": 0.5
+    },
+    "MAMO_EasyLP_fixed_0589": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0218": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 1,
+      "net_help_rate": 0.0,
+      "hurt_rate": 1.0,
+      "net_score": -1.0
+    },
+    "MAMO_EasyLP_fixed_0278": {
+      "retrieval_count": 5,
+      "help_count": 1,
+      "hurt_count": 0,
+      "net_help_rate": 0.2,
+      "hurt_rate": 0.0,
+      "net_score": 0.2
+    },
+    "MAMO_EasyLP_fixed_0626": {
+      "retrieval_count": 3,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0223": {
+      "retrieval_count": 3,
+      "help_count": 2,
+      "hurt_count": 0,
+      "net_help_rate": 0.6666666666666666,
+      "hurt_rate": 0.0,
+      "net_score": 0.6666666666666666
+    },
+    "MAMO_EasyLP_fixed_0263": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0272": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0532": {
+      "retrieval_count": 7,
+      "help_count": 0,
+      "hurt_count": 1,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.14285714285714285,
+      "net_score": -0.14285714285714285
+    },
+    "MAMO_EasyLP_fixed_0444": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0226": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0016": {
+      "retrieval_count": 2,
+      "help_count": 2,
+      "hurt_count": 0,
+      "net_help_rate": 1.0,
+      "hurt_rate": 0.0,
+      "net_score": 1.0
+    },
+    "MAMO_EasyLP_fixed_0331": {
+      "retrieval_count": 5,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0274": {
+      "retrieval_count": 4,
+      "help_count": 0,
+      "hurt_count": 2,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.5,
+      "net_score": -0.5
+    },
+    "MAMO_EasyLP_fixed_0351": {
+      "retrieval_count": 4,
+      "help_count": 1,
+      "hurt_count": 1,
+      "net_help_rate": 0.25,
+      "hurt_rate": 0.25,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0010": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0307": {
+      "retrieval_count": 4,
+      "help_count": 1,
+      "hurt_count": 0,
+      "net_help_rate": 0.25,
+      "hurt_rate": 0.0,
+      "net_score": 0.25
+    },
+    "MAMO_EasyLP_fixed_0104": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 1,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.5,
+      "net_score": -0.5
+    },
+    "MAMO_EasyLP_fixed_0081": {
+      "retrieval_count": 1,
+      "help_count": 1,
+      "hurt_count": 0,
+      "net_help_rate": 1.0,
+      "hurt_rate": 0.0,
+      "net_score": 1.0
+    },
+    "MAMO_EasyLP_fixed_0276": {
+      "retrieval_count": 1,
+      "help_count": 1,
+      "hurt_count": 0,
+      "net_help_rate": 1.0,
+      "hurt_rate": 0.0,
+      "net_score": 1.0
+    },
+    "MAMO_EasyLP_fixed_0073": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0052": {
+      "retrieval_count": 5,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0296": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0624": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0236": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0436": {
+      "retrieval_count": 3,
+      "help_count": 0,
+      "hurt_count": 2,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.6666666666666666,
+      "net_score": -0.6666666666666666
+    },
+    "MAMO_EasyLP_fixed_0237": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0380": {
+      "retrieval_count": 3,
+      "help_count": 0,
+      "hurt_count": 2,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.6666666666666666,
+      "net_score": -0.6666666666666666
+    },
+    "MAMO_EasyLP_fixed_0234": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 1,
+      "net_help_rate": 0.0,
+      "hurt_rate": 1.0,
+      "net_score": -1.0
+    },
+    "MAMO_EasyLP_fixed_0181": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0580": {
+      "retrieval_count": 3,
+      "help_count": 1,
+      "hurt_count": 1,
+      "net_help_rate": 0.3333333333333333,
+      "hurt_rate": 0.3333333333333333,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0558": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0208": {
+      "retrieval_count": 3,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0175": {
+      "retrieval_count": 1,
+      "help_count": 1,
+      "hurt_count": 0,
+      "net_help_rate": 1.0,
+      "hurt_rate": 0.0,
+      "net_score": 1.0
+    },
+    "MAMO_EasyLP_fixed_0206": {
+      "retrieval_count": 4,
+      "help_count": 1,
+      "hurt_count": 1,
+      "net_help_rate": 0.25,
+      "hurt_rate": 0.25,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0215": {
+      "retrieval_count": 3,
+      "help_count": 0,
+      "hurt_count": 2,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.6666666666666666,
+      "net_score": -0.6666666666666666
+    },
+    "MAMO_EasyLP_fixed_0483": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0214": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0403": {
+      "retrieval_count": 5,
+      "help_count": 0,
+      "hurt_count": 2,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.4,
+      "net_score": -0.4
+    },
+    "MAMO_EasyLP_fixed_0392": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0283": {
+      "retrieval_count": 2,
+      "help_count": 1,
+      "hurt_count": 0,
+      "net_help_rate": 0.5,
+      "hurt_rate": 0.0,
+      "net_score": 0.5
+    },
+    "MAMO_EasyLP_fixed_0378": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0109": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0316": {
+      "retrieval_count": 4,
+      "help_count": 0,
+      "hurt_count": 1,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.25,
+      "net_score": -0.25
+    },
+    "MAMO_EasyLP_fixed_0500": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0581": {
+      "retrieval_count": 7,
+      "help_count": 0,
+      "hurt_count": 1,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.14285714285714285,
+      "net_score": -0.14285714285714285
+    },
+    "MAMO_EasyLP_fixed_0212": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0042": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 1,
+      "net_help_rate": 0.0,
+      "hurt_rate": 1.0,
+      "net_score": -1.0
+    },
+    "MAMO_EasyLP_fixed_0254": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0342": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0344": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0017": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 1,
+      "net_help_rate": 0.0,
+      "hurt_rate": 1.0,
+      "net_score": -1.0
+    },
+    "MAMO_EasyLP_fixed_0456": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0144": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0245": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0372": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0341": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0117": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0363": {
+      "retrieval_count": 2,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0419": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0220": {
+      "retrieval_count": 2,
+      "help_count": 1,
+      "hurt_count": 0,
+      "net_help_rate": 0.5,
+      "hurt_rate": 0.0,
+      "net_score": 0.5
+    },
+    "MAMO_EasyLP_fixed_0461": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0204": {
+      "retrieval_count": 0,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    },
+    "MAMO_EasyLP_fixed_0103": {
+      "retrieval_count": 3,
+      "help_count": 1,
+      "hurt_count": 0,
+      "net_help_rate": 0.3333333333333333,
+      "hurt_rate": 0.0,
+      "net_score": 0.3333333333333333
+    },
+    "MAMO_EasyLP_fixed_0182": {
+      "retrieval_count": 1,
+      "help_count": 0,
+      "hurt_count": 0,
+      "net_help_rate": 0.0,
+      "hurt_rate": 0.0,
+      "net_score": 0.0
+    }
+  },
+  "removed_skills": [
+    {
+      "question_id": "MAMO_EasyLP_fixed_0009",
+      "reason": "negative_net_score"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0017",
+      "reason": "negative_net_score"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0033",
+      "reason": "negative_net_score"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0042",
+      "reason": "negative_net_score"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0044",
+      "reason": "negative_net_score"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0052",
+      "reason": "high_freq_useless"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0061",
+      "reason": "extraction_failed"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0066",
+      "reason": "negative_net_score"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0083",
+      "reason": "negative_net_score"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0086",
+      "reason": "negative_net_score"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0087",
+      "reason": "negative_net_score"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0088",
+      "reason": "negative_net_score"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0100",
+      "reason": "negative_net_score"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0104",
+      "reason": "negative_net_score"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0115",
+      "reason": "negative_net_score"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0121",
+      "reason": "negative_net_score"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0138",
+      "reason": "negative_net_score"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0146",
+      "reason": "negative_net_score"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0165",
+      "reason": "negative_net_score"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0168",
+      "reason": "extraction_failed"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0178",
+      "reason": "negative_net_score"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0179",
+      "reason": "high_freq_useless"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0190",
+      "reason": "extraction_failed"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0200",
+      "reason": "extraction_failed"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0215",
+      "reason": "negative_net_score"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0218",
+      "reason": "negative_net_score"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0234",
+      "reason": "negative_net_score"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0238",
+      "reason": "negative_net_score"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0246",
+      "reason": "negative_net_score"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0264",
+      "reason": "negative_net_score"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0274",
+      "reason": "negative_net_score"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0293",
+      "reason": "extraction_failed"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0316",
+      "reason": "negative_net_score"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0317",
+      "reason": "negative_net_score"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0325",
+      "reason": "negative_net_score"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0329",
+      "reason": "extraction_failed"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0331",
+      "reason": "high_freq_useless"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0332",
+      "reason": "negative_net_score"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0333",
+      "reason": "high_freq_useless"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0336",
+      "reason": "high_freq_useless"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0346",
+      "reason": "extraction_failed"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0348",
+      "reason": "negative_net_score"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0349",
+      "reason": "high_freq_useless"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0352",
+      "reason": "negative_net_score"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0360",
+      "reason": "negative_net_score"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0368",
+      "reason": "extraction_failed"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0374",
+      "reason": "negative_net_score"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0380",
+      "reason": "negative_net_score"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0403",
+      "reason": "negative_net_score"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0408",
+      "reason": "negative_net_score"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0411",
+      "reason": "negative_net_score"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0412",
+      "reason": "negative_net_score"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0415",
+      "reason": "negative_net_score"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0416",
+      "reason": "extraction_failed"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0423",
+      "reason": "negative_net_score"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0436",
+      "reason": "negative_net_score"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0441",
+      "reason": "extraction_failed"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0452",
+      "reason": "extraction_failed"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0458",
+      "reason": "negative_net_score"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0498",
+      "reason": "negative_net_score"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0504",
+      "reason": "negative_net_score"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0513",
+      "reason": "negative_net_score"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0515",
+      "reason": "negative_net_score"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0523",
+      "reason": "negative_net_score"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0531",
+      "reason": "negative_net_score"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0532",
+      "reason": "negative_net_score"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0534",
+      "reason": "extraction_failed"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0561",
+      "reason": "negative_net_score"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0575",
+      "reason": "high_freq_useless"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0578",
+      "reason": "extraction_failed"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0581",
+      "reason": "negative_net_score"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0598",
+      "reason": "negative_net_score"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0604",
+      "reason": "negative_net_score"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0605",
+      "reason": "negative_net_score"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0610",
+      "reason": "negative_net_score"
+    },
+    {
+      "question_id": "MAMO_EasyLP_fixed_0640",
+      "reason": "negative_net_score"
+    }
+  ]
+}

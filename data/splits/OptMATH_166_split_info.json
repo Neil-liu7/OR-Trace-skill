@@ -1,0 +1,24 @@
+{
+  "total": 166,
+  "train_count": 158,
+  "test_count": 8,
+  "test_ratio": 0.04819277108433735,
+  "loo_correct": 10,
+  "loo_incorrect": 156,
+  "forced_hub_to_training": 2,
+  "remaining_unresolved": 0,
+  "test_question_ids": [
+    "OptMATH_Bench_166_0000",
+    "OptMATH_Bench_166_0012",
+    "OptMATH_Bench_166_0016",
+    "OptMATH_Bench_166_0018",
+    "OptMATH_Bench_166_0045",
+    "OptMATH_Bench_166_0094",
+    "OptMATH_Bench_166_0102",
+    "OptMATH_Bench_166_0118"
+  ],
+  "forced_hub_ids": [
+    "OptMATH_Bench_166_0002",
+    "OptMATH_Bench_166_0090"
+  ]
+}

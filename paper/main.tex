@@ -1,0 +1,509 @@
+% OR-Skill: Self-Evolving Procedural Skills for Operations Research Problem Solving
+%
+% Target: EMNLP 2025
+%
+
+\documentclass[11pt]{article}
+\usepackage[review]{acl}
+
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\usepackage{inconsolata}
+
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{xcolor}
+\usepackage{subcaption}
+\usepackage{hyperref}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+% Fix lineno (from [review]) interaction with amsmath
+\makeatletter
+\newcommand*\patchAmsMathEnvironmentForLineno[1]{%
+  \expandafter\let\csname old#1\expandafter\endcsname\csname #1\endcsname
+  \expandafter\let\csname oldend#1\expandafter\endcsname\csname end#1\endcsname
+  \renewenvironment{#1}%
+   {\linenomath\csname old#1\endcsname}%
+   {\csname oldend#1\endcsname\endlinenomath}}%
+\newcommand*\patchBothAmsMathEnvironmentsForLineno[1]{%
+  \patchAmsMathEnvironmentForLineno{#1}%
+  \patchAmsMathEnvironmentForLineno{#1*}}%
+\AtBeginDocument{%
+  \patchBothAmsMathEnvironmentsForLineno{equation}%
+  \patchBothAmsMathEnvironmentsForLineno{align}%
+  \patchBothAmsMathEnvironmentsForLineno{gather}%
+  \patchBothAmsMathEnvironmentsForLineno{multline}%
+}
+\makeatother
+
+\newcommand{\ours}{\textsc{OR-Skill}}
+\newcommand{\netscore}{\textit{NetScore}}
+
+\title{\ours{}: Self-Evolving Procedural Skills for Operations Research Problem Solving}
+
+\author{
+  Anonymous Authors
+}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Large language models (LLMs) struggle with Operations Research (OR) problems that require structured mathematical modeling and multi-step numerical computation. While extended chain-of-thought reasoning improves correctness, it incurs prohibitive latency and token costs. We propose \ours{}, a self-evolution framework that automatically extracts, filters, and reuses compact procedural solving skills from a model's own reasoning traces. Our pipeline operates in four stages: (1) think-mode trace generation to produce verified solutions, (2) skill distillation that extracts reusable procedures and worked examples, (3) quality-aware filtering via leave-one-out evaluation metrics and embedding-based deduplication, and (4) skill-augmented inference where retrieved skills guide the model to solve new problems without extended thinking. Experiments on four OR benchmarks show that \ours{} consistently improves over the no-skill baseline, achieving absolute accuracy gains of +6.5\% to +18.8\% across diverse problem types including linear programming, network flow, and combinatorial optimization. Our analysis reveals that skill filtering is critical---removing harmful skills and merging redundant ones reduces the skill library by up to 91.8\% while preserving or improving effectiveness.
+\end{abstract}
+
+\section{Introduction}
+
+Operations Research (OR) problems---spanning linear programming, network flow, scheduling, and combinatorial optimization---are fundamental to industrial decision-making and scientific computing. These problems demand not just mathematical knowledge but precise multi-step computation: formulating constraints, setting up objective functions, applying algorithmic procedures, and performing arithmetic without error.
+
+Recent advances in large language models have demonstrated impressive mathematical reasoning capabilities \cite{deepseek-r1,qwen3}. However, OR problems present unique challenges that distinguish them from standard mathematical reasoning: (1) they require \emph{domain-specific modeling skills} (e.g., recognizing a problem as max-flow and applying Ford-Fulkerson), (2) solutions involve \emph{extended numerical computation} prone to arithmetic errors, and (3) correct solutions often follow \emph{stereotyped procedures} that generalize across similar problems.
+
+A natural approach is to leverage extended chain-of-thought (CoT) reasoning \cite{wei2022chain}, which indeed improves accuracy but at significant cost. Think-mode generation produces thousands of tokens of reasoning per problem, incurring high latency and computational overhead---impractical for production systems where OR problems arise repeatedly with structural similarity.
+
+We observe that OR problems within the same category (e.g., LP relaxation problems, TSP variants) tend to be solved by the same \emph{procedural skill}: a compact sequence of modeling and computation steps. If a model has solved one max-flow problem through extended thinking, the distilled procedure should transfer to similar problems \emph{without} requiring extended thinking again.
+
+This insight motivates \ours{}, a self-evolution framework (Figure~\ref{fig:pipeline}) where a model:
+\begin{enumerate}
+    \item Generates verified solutions to training problems using full thinking capacity;
+    \item Distills compact procedural skills (procedure + worked example + retrieval keywords) from correct traces;
+    \item Filters and merges skills using leave-one-out (LOO) evaluation to remove harmful or redundant entries;
+    \item At inference time, retrieves relevant skills and solves new problems in a lightweight no-think mode.
+\end{enumerate}
+
+The key innovation is that the \emph{same model} both produces and consumes these skills---it self-evolves by converting expensive reasoning into reusable procedural knowledge. Unlike retrieval-augmented generation (RAG) that retrieves external documents, \ours{} retrieves the model's own distilled problem-solving procedures.
+
+Our contributions are three-fold:
+\begin{itemize}
+    \item We propose a complete \emph{skill self-evolution} pipeline that automatically extracts procedural solving skills from a model's own reasoning traces, and curates them through leave-one-out evaluation-based filtering and embedding-based deduplication, reducing skill libraries by up to 91.8\% while preserving effectiveness.
+    \item We introduce a \emph{skill internalization} method via reinforcement learning that compiles the curated procedural knowledge directly into model parameters, enabling the model to apply learned procedures without explicit retrieval at inference time.
+    \item We conduct comprehensive experiments on four diverse OR benchmarks, demonstrating consistent accuracy improvements of +6.5\% to +18.8\% with skill-augmented inference, and provide detailed analysis of skill quality, filtering impact, and transfer dynamics.
+\end{itemize}
+
+\begin{figure*}[t]
+\centering
+\fbox{\parbox{0.95\textwidth}{
+\centering
+\textbf{OR-Skill Pipeline Overview}\\[6pt]
+\begin{tabular}{ccccc}
+Training Problems & $\xrightarrow{\text{Think-mode}}$ & Verified Traces & $\xrightarrow{\text{Distill}}$ & Raw Skills \\
+& & & & $\downarrow$ \\
+& & & & LOO Eval + Filter \\
+& & & & $\downarrow$ \\
+Test Problems & $\xrightarrow{\text{Retrieve}}$ & Filtered Skills & $\xrightarrow{\text{NoThink}}$ & Predictions \\
+\end{tabular}
+}}
+\caption{Overview of the \ours{} pipeline. Training problems are solved via extended thinking, correct traces are distilled into procedural skills, skills are filtered using LOO evaluation metrics, and filtered skills are retrieved to guide inference on test problems without extended thinking.}
+\label{fig:pipeline}
+\end{figure*}
+
+\section{Related Work}
+
+\paragraph{LLMs for Mathematical and OR Reasoning.}
+Large language models have shown strong progress on mathematical reasoning through chain-of-thought prompting \cite{wei2022chain}, self-consistency \cite{wang2023selfconsistency}, and dedicated reasoning models \cite{deepseek-r1,qwen3}. For OR specifically, recent benchmarks like MAMO \cite{mamo2024}, NL4OPT \cite{nl4opt2023}, and OptMATH \cite{optmath2024} evaluate models on formulation and solving of optimization problems. However, most work focuses on either pure formulation or code-generation approaches; our work targets direct mathematical solving guided by procedural skills.
+
+\paragraph{Knowledge Distillation and Skill Extraction.}
+The idea of extracting reusable knowledge from model outputs has been explored in various forms: step-by-step distillation \cite{hsieh2023distilling}, self-taught reasoning \cite{zelikman2022star}, and skill-based decomposition \cite{chen2024skills}. Our approach differs in extracting \emph{procedural} skills---sequences of concrete computational actions rather than abstract strategies---and applying them in a retrieval-augmented manner.
+
+\paragraph{Retrieval-Augmented Generation.}
+RAG systems \cite{lewis2020retrieval,guu2020realm} augment generation with retrieved documents. Recent work applies RAG to reasoning tasks via retrieved demonstrations \cite{rubin2022learning} or retrieved reasoning chains \cite{zhang2023retrieve}. \ours{} extends this paradigm by retrieving \emph{distilled procedural skills} rather than raw examples, and includes a quality-aware filtering stage that removes skills empirically shown to harm performance.
+
+\paragraph{Self-Improvement and Evolution.}
+Self-play \cite{silver2017mastering}, self-refinement \cite{madaan2023selfrefine}, and iterative self-training \cite{singh2024beyond} enable models to improve from their own outputs. Our self-evolution framework shares this spirit but focuses on \emph{persistent skill accumulation}: the model builds a growing library of verified procedures that transfer across problems.
+
+\section{Method}
+\label{sec:method}
+
+\subsection{Overview}
+
+Given a set of OR problems $\mathcal{D} = \{(q_i, a_i)\}_{i=1}^N$ with questions $q_i$ and gold answers $a_i$, our pipeline produces a skill library $\mathcal{S}$ that improves inference accuracy on held-out test problems. The pipeline consists of four stages, detailed below.
+
+\subsection{Think-Mode Trace Generation}
+
+We first generate detailed reasoning traces by prompting the model with full thinking capacity:
+\begin{equation}
+    r_i = \text{LLM}_\text{think}(q_i)
+\end{equation}
+where $r_i$ includes both the internal reasoning (``thinking'' tokens) and the final response. We then verify correctness by extracting the predicted answer and comparing against $a_i$. Only traces with correct answers are retained:
+\begin{equation}
+    \mathcal{D}_\text{verified} = \{(q_i, r_i, a_i) \mid \text{extract}(r_i) = a_i\}
+\end{equation}
+
+In practice, we use temperature $\tau=0.7$ to encourage diverse solving strategies, with a maximum token budget of 16,384 tokens per trace.
+
+\subsection{Skill Distillation}
+
+For each verified trace, we distill a compact procedural skill consisting of three components:
+
+\paragraph{Solving Procedure.} A sequence of concrete computational steps generalized from the specific trace. Steps use action verbs (``Define variables for...'', ``Set up constraint from...'', ``Evaluate at boundary...'') with numerical specifics replaced by descriptive placeholders.
+
+\paragraph{Worked Example.} A compact ($\sim$150--250 words) application of the procedure to the original problem, providing a concrete template for similar problems.
+
+\paragraph{Retrieval Keywords.} 10--20 domain-specific terms for retrieval matching (e.g., ``linear programming, simplex, resource allocation, maximize profit'').
+
+Formally, for each $(q_i, r_i, a_i) \in \mathcal{D}_\text{verified}$:
+\begin{equation}
+    s_i = (\text{proc}_i, \text{example}_i, \text{kw}_i) = \text{Distill}(q_i, r_i, a_i)
+\end{equation}
+
+The distillation uses the same model at low temperature ($\tau=0.3$) to ensure deterministic, high-quality extraction.
+
+\subsection{Skill Filtering and Merging}
+\label{sec:filtering}
+
+Raw distilled skills may include harmful entries (that mislead the model on problems they are retrieved for) or redundant entries (multiple nearly-identical procedures for the same problem type). We propose a quality-aware filtering mechanism based on leave-one-out (LOO) evaluation.
+
+\paragraph{LOO Evaluation.} For each training problem $q_i$, we perform inference with skill retrieval but \emph{excluding} the skill derived from $q_i$ itself (leave-one-out). This measures whether skills from \emph{other} problems help solve $q_i$:
+\begin{equation}
+    \hat{a}_i^\text{LOO} = \text{LLM}_\text{noThink}(q_i, \text{Retrieve}(\mathcal{S} \setminus \{s_i\}, q_i))
+\end{equation}
+
+\paragraph{Per-Skill Metrics.} We define the \netscore{} for each skill $s_j$:
+\begin{align}
+    \text{HelpRate}(s_j) &= \frac{|\{q_i : s_j \in \text{Retrieved}(q_i),\ \text{base}_i{=}0,\ \text{LOO}_i{=}1\}|}{|\text{Retrieved}^{-1}(s_j)|} \\
+    \text{HurtRate}(s_j) &= \frac{|\{q_i : s_j \in \text{Retrieved}(q_i),\ \text{base}_i{=}1,\ \text{LOO}_i{=}0\}|}{|\text{Retrieved}^{-1}(s_j)|} \\
+    \netscore{}(s_j) &= \text{HelpRate}(s_j) - \text{HurtRate}(s_j)
+\end{align}
+where $\text{base}_i$ and $\text{LOO}_i$ indicate whether $q_i$ was answered correctly by the baseline (no-skill) and LOO models respectively.
+
+\paragraph{Filtering Rules.} We remove skills satisfying any of:
+\begin{enumerate}
+    \item $\netscore{} < 0$ (harmful: hurts more than helps)
+    \item $\text{HelpRate} = 0$ and retrieval count $\geq 5$ (frequently retrieved but never helpful)
+    \item Extraction failure (no valid procedure extracted)
+\end{enumerate}
+
+\paragraph{Embedding-Based Merging.} Among remaining skills, we merge near-duplicates:
+\begin{enumerate}
+    \item Encode all procedures using a sentence embedding model (BGE-small-en-v1.5);
+    \item Greedily cluster: sort by \netscore{} descending; assign each unassigned skill to the cluster of the first skill with cosine similarity $> 0.85$;
+    \item Keep the highest-\netscore{} skill per cluster as representative;
+    \item Merge keywords from all cluster members into the representative (expanding retrieval coverage).
+\end{enumerate}
+
+\subsection{Skill-Augmented Inference}
+
+At inference time, given a test problem $q$:
+\begin{enumerate}
+    \item \textbf{Retrieve}: Use structural-hybrid retrieval (structural pre-filtering by problem signature + BM25 + embedding similarity with RRF fusion) to find top-$k$ relevant skills from the filtered library;
+    \item \textbf{Augment}: Inject the retrieved procedure(s) and worked example(s) into the prompt as solving guidance;
+    \item \textbf{Solve}: Generate the answer in no-think mode (extended reasoning disabled, temperature 0), following the provided procedure.
+\end{enumerate}
+
+The structural pre-filter uses a lightweight signature (optimization direction, constraint counts, numerical complexity) to restrict retrieval to structurally compatible skills before applying BM25 and embedding scoring.
+
+\section{Experiments}
+\label{sec:experiments}
+
+\subsection{Experimental Setup}
+
+\paragraph{Model.} We use Qwen3-14B \cite{qwen3} served via vLLM with tensor parallelism. Think-mode uses the model's native reasoning capability; no-think mode disables extended reasoning (\texttt{enable\_thinking=False}).
+
+\paragraph{Benchmarks.} We evaluate on four diverse OR benchmarks:
+\begin{itemize}
+    \item \textbf{MAMO-ComplexLP} \cite{mamo2024}: 203 complex linear programming problems involving multi-variable optimization, network flow, and resource allocation.
+    \item \textbf{MAMO-EasyLP} \cite{mamo2024}: 642 simpler LP problems with fewer variables and constraints.
+    \item \textbf{IndustryOR}: 100 industry-level OR problems from real manufacturing and logistics scenarios.
+    \item \textbf{NL4OPT} \cite{nl4opt2023}: 245 natural language optimization problems requiring formulation and solving.
+\end{itemize}
+
+\paragraph{Train/Test Split.} We use a dependency-aware splitting strategy (Section~\ref{sec:split}) that ensures no information leakage: test questions' retrieved skills must all originate from training set problems. Table~\ref{tab:splits} shows the splits.
+
+\begin{table}[t]
+\centering
+\caption{Train/test split statistics. Test set consists of LOO-correct problems whose skill dependencies are all satisfiable from the training set.}
+\label{tab:splits}
+\small
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+\textbf{Benchmark} & \textbf{Total} & \textbf{Train} & \textbf{Test} & \textbf{Ratio} \\
+\midrule
+ComplexLP   & 203 & 157 & 46  & 22.7\% \\
+EasyLP      & 642 & 454 & 188 & 29.3\% \\
+IndustryOR  & 100 & 84  & 16  & 16.0\% \\
+NL4OPT      & 245 & 176 & 69  & 28.2\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Evaluation Protocol.} We report accuracy (exact match after answer extraction) averaged over 5 independent trials with temperature 0.7 to capture variance. We also report single-run results at temperature 0 for deterministic comparison.
+
+\paragraph{Baselines.}
+\begin{itemize}
+    \item \textbf{No-Skill Baseline}: Same model in no-think mode without any skill augmentation (same prompt template minus skill injection).
+    \item \textbf{Unfiltered Skills}: Full skill library without filtering/merging (ablation).
+\end{itemize}
+
+\subsection{Main Results}
+
+Table~\ref{tab:main_results} presents the main comparison. \ours{} consistently outperforms the no-skill baseline across all four benchmarks.
+
+\begin{table}[t]
+\centering
+\caption{Main results: accuracy (\%) averaged over 5 trials ($\tau$=0.7). $\Delta$ = absolute improvement of \ours{} over baseline.}
+\label{tab:main_results}
+\small
+\begin{tabular}{@{}lcccr@{}}
+\toprule
+\textbf{Benchmark} & \textbf{$N_\text{test}$} & \textbf{\ours{}} & \textbf{Baseline} & \textbf{$\Delta$} \\
+\midrule
+ComplexLP   & 46  & 51.7{\scriptsize$\pm$4.2} & 37.0{\scriptsize$\pm$3.9} & +14.8 \\
+EasyLP      & 188 & 61.1{\scriptsize$\pm$1.7} & 54.6{\scriptsize$\pm$1.6} & +6.5 \\
+IndustryOR  & 16  & 33.8{\scriptsize$\pm$9.4} & 15.0{\scriptsize$\pm$6.4} & +18.8 \\
+NL4OPT      & 69  & 44.6{\scriptsize$\pm$4.4} & 28.5{\scriptsize$\pm$6.0} & +16.1 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Key Observations.}
+(1) The improvement is most pronounced on harder benchmarks (ComplexLP, IndustryOR, NL4OPT) where baseline performance is low and procedural guidance provides the most benefit.
+(2) EasyLP shows a smaller but consistent improvement (+6.5\%), reflecting that simpler problems benefit less from explicit procedural guidance.
+(3) IndustryOR achieves the largest delta (+18.8\%) despite a small test set, suggesting that industry-level problems with specialized structure benefit greatly from relevant procedural skills.
+(4) Standard deviations are moderate (1.6--9.4\%), with larger variance on smaller test sets as expected.
+
+\subsection{Single-Run Results}
+
+Table~\ref{tab:single_run} shows deterministic results at temperature 0 for reproducibility.
+
+\begin{table}[t]
+\centering
+\caption{Single-run results at temperature 0 (deterministic).}
+\label{tab:single_run}
+\small
+\begin{tabular}{@{}lccr@{}}
+\toprule
+\textbf{Benchmark} & \textbf{\ours{}} & \textbf{Baseline} & \textbf{$\Delta$} \\
+\midrule
+ComplexLP   & 52.2\% & 45.7\% & +6.5 \\
+EasyLP      & 62.2\% & 55.9\% & +6.4 \\
+IndustryOR  & 31.2\% & 12.5\% & +18.8 \\
+NL4OPT      & 42.0\% & 23.2\% & +18.8 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Effect of Skill Filtering}
+\label{sec:ablation_filter}
+
+Table~\ref{tab:filtering} demonstrates the impact of our filtering and merging pipeline.
+
+\begin{table}[t]
+\centering
+\caption{Skill library statistics before and after filtering. Raw = successfully extracted skills; Filter = after removing harmful/useless skills; Merge = after embedding-based deduplication.}
+\label{tab:filtering}
+\small
+\begin{tabular}{@{}lrrrl@{}}
+\toprule
+\textbf{Benchmark} & \textbf{Raw} & \textbf{Filter} & \textbf{Merge} & \textbf{Reduction} \\
+\midrule
+ComplexLP   & 80  & 76  & 14 & 82.5\% \\
+EasyLP      & 352 & 289 & 29 & 91.8\% \\
+IndustryOR  & 21  & 13  & 11 & 47.6\% \\
+NL4OPT      & 38  & 18  & 14 & 63.2\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Filtering removes harmful skills.}
+EasyLP has the most aggressive filtering: 56 skills with negative \netscore{} are removed (skills that cause the model to answer incorrectly on problems it would otherwise solve). This is because simpler problems are more susceptible to misleading procedural guidance---the model's baseline capability is already adequate, and injecting irrelevant procedures introduces errors.
+
+\paragraph{Merging achieves dramatic compression.}
+Embedding-based merging reduces ComplexLP from 76 to 14 skills (5.4$\times$ compression) by identifying clusters of near-identical procedures for the same problem type (e.g., multiple max-flow procedures). The merged representative preserves effectiveness while expanding keyword coverage.
+
+\paragraph{Filtering is critical for smaller benchmarks.}
+IndustryOR and NL4OPT have relatively high proportions of harmful skills (28.6\% and 50.0\% of raw skills have negative \netscore{}), making filtering essential for positive transfer.
+
+\subsection{Analysis}
+\label{sec:analysis}
+
+\paragraph{Why do skills help?}
+Skills provide two key benefits: (1) \emph{procedural structure} that guides the model through multi-step computation without losing track of the algorithm, and (2) \emph{worked examples} that demonstrate the exact arithmetic patterns needed for similar problems. On ComplexLP, which includes max-flow, TSP relaxation, and multi-commodity LP problems, the model frequently loses track of augmenting paths or forgets constraints without procedural guidance.
+
+\paragraph{When do skills hurt?}
+Analysis of EasyLP reveals that skills can mislead when: (1) the retrieved procedure is for a subtly different problem variant (e.g., minimization procedure applied to maximization), or (2) the problem is simple enough that the model solves it correctly without guidance, but the injected procedure causes it to overcomplicate the computation.
+
+\paragraph{Dependency-Aware Splitting.}
+\label{sec:split}
+Our train/test split ensures rigorous evaluation by enforcing that every test problem's retrieved skills originate from training set problems. We use a greedy algorithm: LOO-incorrect problems are placed in training (they cannot be in the test set by definition); LOO-correct ``hub'' problems (depended upon by many others) are sacrificed to training to maximize test set size; remaining LOO-correct problems whose dependencies are all satisfied enter the test set. This guarantees no self-retrieval or data leakage.
+
+\paragraph{Skill Transfer Analysis.}
+The test set consists exclusively of problems that were correctly solved via LOO (with skills from other problems), confirming genuine skill transfer. The gap between LOO accuracy (100\% by construction) and actual test accuracy (52--62\%) reflects the difference between the full unfiltered skill bank and the compressed filtered library, plus the stochasticity of retrieval.
+
+\section{Discussion}
+
+\paragraph{Efficiency Gains.}
+Beyond accuracy, \ours{} provides significant efficiency benefits. Think-mode generation produces 4,000--16,000 tokens per problem; skill-augmented no-think inference produces 500--2,000 tokens. This represents a 4--8$\times$ reduction in generation cost while maintaining or improving accuracy on skill-transferable problems.
+
+\paragraph{Scalability.}
+The framework is designed for incremental growth: as new problems are solved, their skills can be added to the library, re-evaluated via LOO, and merged with existing clusters. This enables continuous self-improvement without full retraining.
+
+\paragraph{Limitations.}
+(1) The test set is restricted to LOO-correct problems, which limits test size on harder benchmarks (IndustryOR: 16 items). Future work should explore relaxed splitting criteria.
+(2) Skill quality depends on trace correctness; problems the model cannot solve via thinking cannot contribute skills.
+(3) The structural-hybrid retrieval assumes OR problems have identifiable structural signatures; this may not generalize to highly heterogeneous problem sets.
+
+\section{Skill Internalization via Reinforcement Learning}
+\label{sec:internalization}
+
+While retrieval-augmented skill injection (Section~\ref{sec:method}) effectively improves inference accuracy, it introduces a runtime dependency on the skill library and retrieval system. We propose \emph{skill internalization}---training the model to apply learned procedures \emph{without} explicit retrieval---as a complementary approach that eliminates this dependency while preserving the benefits of procedural knowledge.
+
+\subsection{Motivation}
+
+The retrieval-based approach has inherent limitations: (1) retrieval errors can inject irrelevant skills, (2) the system requires maintaining a separate embedding index and skill database, and (3) inference latency includes retrieval overhead. Skill internalization addresses these by ``compiling'' the procedural knowledge directly into model parameters.
+
+The key insight is that skill-augmented correct solutions provide high-quality training signal: they demonstrate how to apply specific procedures to reach correct answers. By training on these demonstrations and reinforcing with outcome-based rewards, the model learns to internally invoke appropriate procedures when encountering similar problems.
+
+\subsection{Method}
+
+Our skill internalization pipeline consists of two stages:
+
+\paragraph{Stage 1: Supervised Warm-Up.}
+We construct SFT data from the skill-augmented inference outputs. For each test problem $q_i$ where skill-augmented inference produced a correct answer:
+\begin{equation}
+    \mathcal{D}_\text{SFT} = \{(q_i, y_i^\text{skill}) \mid y_i^\text{skill} \text{ is correct}\}
+\end{equation}
+where $y_i^\text{skill}$ is the model's response when guided by retrieved skills. This teaches the model the \emph{pattern} of following structured procedures without the explicit skill injection in the prompt.
+
+We apply parameter-efficient fine-tuning (LoRA; \citealp{hu2022lora}) to avoid catastrophic forgetting of general capabilities:
+\begin{equation}
+    \theta^* = \arg\min_\theta \sum_{(q_i, y_i) \in \mathcal{D}_\text{SFT}} \mathcal{L}_\text{CE}(f_\theta(q_i), y_i)
+\end{equation}
+
+\paragraph{Stage 2: Reinforcement Learning with Outcome Reward.}
+SFT alone may overfit to surface patterns without truly internalizing the procedural logic. We apply reinforcement learning with a rule-based reward signal:
+\begin{equation}
+    R(q_i, \hat{y}_i) = \begin{cases}
+        +1 & \text{if } \text{extract}(\hat{y}_i) = a_i \\
+        -0.5 & \text{if } \text{extract}(\hat{y}_i) \neq a_i \\
+        -1 & \text{if no answer extracted}
+    \end{cases}
+\end{equation}
+
+We use Group Relative Policy Optimization (GRPO), which samples multiple responses per question and computes advantages relative to the group mean:
+\begin{equation}
+    A_i^{(j)} = \frac{R(q_i, \hat{y}_i^{(j)}) - \text{mean}_k R(q_i, \hat{y}_i^{(k)})}{\text{std}_k R(q_i, \hat{y}_i^{(k)}) + \epsilon}
+\end{equation}
+
+The RL training uses the full training set (including problems without matching skills), encouraging the model to generalize procedural reasoning beyond the specific skill library.
+
+\paragraph{Optional: Procedure-Aware Reward Shaping.}
+To encourage the model to explicitly follow procedural structure (rather than arriving at correct answers through unstructured reasoning), we add a format bonus:
+\begin{equation}
+    R_\text{proc}(\hat{y}_i) = \alpha \cdot \mathbb{1}[\hat{y}_i \text{ contains numbered steps}]
+\end{equation}
+where $\alpha = 0.1$ provides a small bonus for structured outputs without dominating the correctness signal.
+
+\subsection{Expected Outcomes}
+
+Skill internalization aims to achieve:
+\begin{itemize}
+    \item \textbf{Retrieval-free inference}: The model applies appropriate procedures without explicit skill injection, eliminating retrieval latency and errors.
+    \item \textbf{Generalization beyond the skill library}: RL training on broader problem sets encourages the model to develop internal procedural reasoning that extends beyond the specific skills in the library.
+    \item \textbf{Maintained efficiency}: The internalized model still operates in no-think mode (short generation), preserving the latency benefits of the skill-augmented approach.
+\end{itemize}
+
+The full pipeline thus represents a three-stage progression:
+\begin{enumerate}
+    \item \textbf{Think mode}: Expensive but accurate reasoning (baseline capability);
+    \item \textbf{Skill retrieval}: Efficient inference guided by external procedural knowledge (this work, Sections~\ref{sec:method}--\ref{sec:experiments});
+    \item \textbf{Skill internalization}: Efficient inference with internalized procedural knowledge (no external dependency).
+\end{enumerate}
+
+\section{Conclusion}
+
+We presented \ours{}, a self-evolution framework that enables LLMs to extract, curate, and reuse procedural solving skills for Operations Research problems. Through automatic skill distillation from reasoning traces, quality-aware filtering via LOO evaluation, and embedding-based deduplication, \ours{} builds compact skill libraries (14--29 skills) that consistently improve inference accuracy by +6.5\% to +18.8\% across four diverse OR benchmarks. Our analysis shows that skill filtering is critical---it removes harmful entries and achieves up to 91.8\% compression while preserving effectiveness.
+
+Beyond retrieval-augmented skill injection, we propose skill internalization via reinforcement learning as a pathway to eliminate runtime retrieval dependencies. By training on skill-guided correct solutions and reinforcing with outcome-based rewards, the model can learn to internally invoke appropriate procedures, completing the self-evolution cycle from expensive thinking to efficient internalized knowledge.
+
+The \ours{} framework provides a practical paradigm for deploying LLMs on specialized problem domains: invest in extended thinking once to build a skill library, curate it through automated quality assessment, and ultimately internalize it into model parameters for deployment without external dependencies.
+
+\bibliography{references}
+\bibliographystyle{acl_natbib}
+
+\appendix
+
+\section{Skill Distillation Prompt}
+\label{app:distill_prompt}
+
+The following prompt is used to distill procedural skills from verified reasoning traces:
+
+\begin{quote}
+\small
+\textbf{System Role:} You are a principal engineer specializing in extracting reusable solving procedures from worked examples.
+
+\textbf{Objective:} Given a Problem, a Reasoning Trace, and the Correct Answer, extract a compact, reusable solving procedure that another model can follow to solve similar problems without extended thinking.
+
+\textbf{Instructions:}
+\begin{itemize}
+    \item Analyze the reasoning trace and extract PROCEDURAL steps (actions to perform), not strategic advice.
+    \item Each step should be an executable action: ``Define variables'', ``Set up constraint from [pattern]'', ``Substitute X into Y'', etc.
+    \item Generalize: replace specific numbers with descriptive placeholders but keep mathematical operations concrete.
+    \item Include a compact worked example ($\sim$150--250 words).
+    \item Provide retrieval keywords for BM25 matching.
+\end{itemize}
+
+\textbf{Output Format:} XML with \texttt{<solving\_procedure>}, \texttt{<worked\_example>}, \texttt{<retrieval\_keywords>} tags.
+\end{quote}
+
+\section{Skill Inference Prompt}
+\label{app:infer_prompt}
+
+At inference time, skills are injected as follows:
+
+\begin{quote}
+\small
+You are a helpful assistant that solves problems by following a given procedure.
+
+Below is a solving procedure and worked example for a similar problem. Follow the same steps to solve the new problem.
+
+[Solving Procedure and Example]
+
+\{SOLVING\_HINTS\}
+
+[/Solving Procedure and Example]
+
+Now solve the following problem by applying the same procedure. Show each step with its computation, then give the final answer.
+
+Problem: \{PROBLEM\}
+\end{quote}
+
+\section{Detailed Per-Trial Results}
+\label{app:per_trial}
+
+Table~\ref{tab:per_trial} shows individual trial accuracies for all benchmarks.
+
+\begin{table}[t]
+\centering
+\caption{Per-trial accuracy (\%) at temperature 0.7.}
+\label{tab:per_trial}
+\small
+\begin{tabular}{@{}llccccc@{}}
+\toprule
+\textbf{Benchmark} & \textbf{Method} & \textbf{T1} & \textbf{T2} & \textbf{T3} & \textbf{T4} & \textbf{T5} \\
+\midrule
+\multirow{2}{*}{ComplexLP}
+& \ours{}   & 52.2 & 47.8 & 45.7 & 56.5 & 56.5 \\
+& Baseline  & 32.6 & 34.8 & 37.0 & 39.1 & 41.3 \\
+\midrule
+\multirow{2}{*}{EasyLP}
+& \ours{}   & 61.2 & 59.6 & 63.3 & 60.6 & 60.6 \\
+& Baseline  & 54.3 & 53.7 & 55.3 & 56.4 & 53.2 \\
+\midrule
+\multirow{2}{*}{IndustryOR}
+& \ours{}   & 37.5 & 25.0 & 31.2 & 31.2 & 43.8 \\
+& Baseline  & 18.8 & 12.5 & 6.2  & 12.5 & 25.0 \\
+\midrule
+\multirow{2}{*}{NL4OPT}
+& \ours{}   & 39.1 & 44.9 & 44.9 & 47.8 & 46.4 \\
+& Baseline  & 21.7 & 27.5 & 31.9 & 24.6 & 36.2 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\end{document}

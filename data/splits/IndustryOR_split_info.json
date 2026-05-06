@@ -1,0 +1,36 @@
+{
+  "total": 100,
+  "train_count": 84,
+  "test_count": 16,
+  "test_ratio": 0.16,
+  "loo_correct": 22,
+  "loo_incorrect": 78,
+  "forced_hub_to_training": 6,
+  "remaining_unresolved": 0,
+  "test_question_ids": [
+    "10",
+    "18",
+    "23",
+    "37",
+    "48",
+    "52",
+    "60",
+    "63",
+    "71",
+    "73",
+    "75",
+    "79",
+    "83",
+    "91",
+    "92",
+    "99"
+  ],
+  "forced_hub_ids": [
+    "19",
+    "21",
+    "26",
+    "62",
+    "68",
+    "72"
+  ]
+}
