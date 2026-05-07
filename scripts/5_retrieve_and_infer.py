@@ -130,6 +130,8 @@ async def process_one(
 async def run(args: argparse.Namespace) -> None:
     with open(args.config) as f:
         cfg = yaml.safe_load(f)
+    if getattr(args, 'exclude_self', False):
+        cfg.setdefault("inference", {})["exclude_self"] = True
     rows = load_jsonl(args.input_file)
     if args.limit:
         rows = rows[:args.limit]
@@ -171,6 +173,7 @@ def main() -> None:
     parser.add_argument("output_file", help="Output predictions JSONL")
     parser.add_argument("--config", default="configs/default.yaml")
     parser.add_argument("--limit", type=int)
+    parser.add_argument("--exclude-self", action="store_true", help="LOO mode: exclude skill from same question")
     args = parser.parse_args()
     asyncio.run(run(args))
 

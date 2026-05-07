@@ -63,7 +63,7 @@ def render_prompt(
     }
     result = template
     for key, value in replacements.items():
-        result = result.replace(key, value)
+        result = result.replace(key, str(value))
     return result
 
 
@@ -157,7 +157,7 @@ def extract_final_answer(text: str) -> str:
 
 
 def normalize_answer(text: str) -> str:
-    text = text.strip().lower()
+    text = str(text).strip().lower()
     text = re.sub(r"\\boxed\s*{([^{}]*)}", r"\1", text)
     text = re.sub(r"\\text\s*{([^{}]*)}", r"\1", text)
     for token in ["$", "\\(", "\\)", "\\[", "\\]", "\\left", "\\right", "`", "*", "#", "✅"]:

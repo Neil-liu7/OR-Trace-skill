@@ -1,9 +1,5 @@
 api_base_url: http://127.0.0.1:8001/v1/chat/completions
 api_key: dummy
-evolution:
-  keep_strategy: replace_by_qid
-  min_improvement: 0.0
-  rounds: 3
 inference:
   max_concurrent: 16
   max_retries: 3

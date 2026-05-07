@@ -39,7 +39,3 @@ synthesis:
   max_concurrent: 4
   num_problems_per_seed: 5
 
-evolution:
-  rounds: 3
-  keep_strategy: "replace_by_qid"
-  min_improvement: 0.0
