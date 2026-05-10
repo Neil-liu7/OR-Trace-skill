@@ -9,6 +9,13 @@ Instructions:
 - Each step should be an executable action: "Define variables", "Set up constraint from [pattern]", "Substitute X into Y", "Evaluate at boundary", etc.
 - Generalize: replace specific numbers with descriptive placeholders (e.g., "the budget limit", "the cost coefficient") but keep the mathematical operations concrete.
 - Include a compact worked example that shows the procedure applied to THIS problem, stripped to essential computation (~150-250 words). This serves as a template.
+- Include a minimal Python code template (max 30 lines) showing the KEY modeling pattern. Replace problem-specific data with placeholders (DATA, N, COST_MATRIX, etc.). Choose the most appropriate library for the problem type:
+  * PuLP: standard LP/MIP with linear constraints
+  * pyscipopt: complex MIP requiring callbacks or indicator constraints
+  * itertools + PuLP/pyscipopt with MTZ variables: TSP / routing with subtour elimination
+  * networkx: network flow, shortest path, graph algorithms
+  * scipy.optimize.minimize: nonlinear / quadratic optimization
+  * for t in range(T) loop pattern: multi-period planning, lot sizing, inventory
 - Provide retrieval keywords for BM25 matching.
 
 Output Format (XML only):
@@ -23,6 +30,10 @@ Step N: [final verification step]
 <worked_example>
 [Compact worked solution: variables, key equations, substitution, computation, final answer. No narrative — just math and minimal connective text.]
 </worked_example>
+
+<code_template>
+[Minimal executable Python code skeleton (max 30 lines) showing the critical modeling pattern for this problem type. Include imports, variable setup, and the key constraint structure. Use placeholders for data.]
+</code_template>
 
 <retrieval_keywords>
 [10-20 comma-separated keywords mixing domain terms, constraint types, and problem patterns]

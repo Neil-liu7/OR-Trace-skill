@@ -70,6 +70,7 @@ async def process_one(
     content = resp.text
     procedure = extract_xml_content(content, "solving_procedure")
     worked_example = extract_xml_content(content, "worked_example")
+    code_template = extract_xml_content(content, "code_template")
     keywords = extract_xml_content(content, "retrieval_keywords")
 
     inject_text = ""
@@ -77,12 +78,15 @@ async def process_one(
         inject_text = procedure
         if worked_example:
             inject_text += "\n\nWorked Example:\n" + worked_example
+        if code_template:
+            inject_text += "\n\nCode Template:\n```python\n" + code_template.strip() + "\n```"
 
     return {
         **item,
         "distill_model": cfg["model"],
         "procedure": procedure,
         "worked_example": worked_example,
+        "code_template": code_template,
         "inject_text": inject_text,
         "keywords": keywords,
         "raw_skill_response": content,

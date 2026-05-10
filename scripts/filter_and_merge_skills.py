@@ -96,25 +96,79 @@ def filter_skills(
     return kept, removed
 
 
-def merge_similar_skills(
+def classify_skill_type(skill: dict) -> str:
+    """Classify a skill into a problem sub-type based on question + keywords + procedure."""
+    text = " ".join([
+        skill.get("question", ""),
+        skill.get("keywords", ""),
+        skill.get("procedure", ""),
+    ]).lower()
+
+    if any(k in text for k in [
+        "tsp", "traveling salesman", "travelling salesman", "visit each city",
+        "visit all cities", "subtour", "hamiltonian", "tour",
+    ]):
+        return "TSP"
+    if any(k in text for k in [
+        "vehicle routing", "vrp", "delivery route", "capacitated routing",
+    ]):
+        return "VRP"
+    if any(k in text for k in [
+        "network flow", "max flow", "min cost flow", "minimum cost flow",
+        "maximum flow", "flow balance", "transshipment",
+    ]):
+        return "NetworkFlow"
+    if any(k in text for k in [
+        "multi-period", "multiperiod", "lot sizing", "lotsizing",
+        "inventory balance", "production planning over", "time horizon",
+        "period 1", "period 2", "month 1", "month 2",
+    ]):
+        return "MultiPeriod"
+    if any(k in text for k in [
+        "nonlinear", "quadratic", "scipy", "convex optimization",
+        "geometric programming",
+    ]):
+        return "Nonlinear"
+    if any(k in text for k in [
+        "job shop", "jobshop", "makespan", "scheduling", "precedence constraint",
+    ]):
+        return "Scheduling"
+    if any(k in text for k in [
+        "facility location", "warehouse location", "plant location",
+    ]):
+        return "FacilityLocation"
+    if any(k in text for k in [
+        "knapsack", "bin packing", "set cover",
+    ]):
+        return "Knapsack"
+    return "StandardLP"
+
+
+# Per-type similarity thresholds: specialized types use higher thresholds
+# to preserve diversity; StandardLP uses default (more aggressive merge is OK)
+TYPE_SIMILARITY_THRESHOLDS: dict[str, float] = {
+    "TSP": 0.92,
+    "VRP": 0.92,
+    "NetworkFlow": 0.92,
+    "MultiPeriod": 0.90,
+    "Nonlinear": 0.90,
+    "Scheduling": 0.90,
+    "FacilityLocation": 0.90,
+    "Knapsack": 0.88,
+    "StandardLP": 0.85,
+}
+
+
+def _greedy_cluster(
     skills: list[dict],
     metrics: dict[str, dict],
-    embed_model_name: str = "BAAI/bge-small-en-v1.5",
-    similarity_threshold: float = 0.85,
-) -> list[dict]:
-    """Cluster similar skills by procedure embedding, keep best per cluster."""
-    if len(skills) <= 1:
-        return skills
-
-    from sentence_transformers import SentenceTransformer
-
-    model = SentenceTransformer(embed_model_name, device="cpu")
-    procedures = [s.get("procedure", "") for s in skills]
-    embeddings = model.encode(procedures, normalize_embeddings=True, show_progress_bar=False).astype("float32")
-
-    # Greedy clustering: sorted by net_score descending
-    sorted_indices = sorted(
-        range(len(skills)),
+    embeddings: "np.ndarray",
+    indices: list[int],
+    similarity_threshold: float,
+) -> list[list[int]]:
+    """Greedy clustering on a subset of skills identified by indices."""
+    sorted_sub = sorted(
+        indices,
         key=lambda i: metrics.get(skills[i]["question_id"], {}).get("net_score", 0),
         reverse=True,
     )
@@ -122,13 +176,13 @@ def merge_similar_skills(
     clusters: list[list[int]] = []
     assigned = set()
 
-    for idx in sorted_indices:
+    for idx in sorted_sub:
         if idx in assigned:
             continue
         cluster = [idx]
         assigned.add(idx)
 
-        for other_idx in sorted_indices:
+        for other_idx in sorted_sub:
             if other_idx in assigned:
                 continue
             sim = float(embeddings[idx] @ embeddings[other_idx])
@@ -138,11 +192,49 @@ def merge_similar_skills(
 
         clusters.append(cluster)
 
-    # For each cluster, keep the representative (highest net_score) and merge keywords
+    return clusters
+
+
+def merge_similar_skills(
+    skills: list[dict],
+    metrics: dict[str, dict],
+    embed_model_name: str = "BAAI/bge-small-en-v1.5",
+    similarity_threshold: float = 0.85,
+) -> list[dict]:
+    """Type-aware clustering: group skills by problem type, then cluster within each group."""
+    if len(skills) <= 1:
+        return skills
+
+    from sentence_transformers import SentenceTransformer
+
+    model = SentenceTransformer(embed_model_name, device="cpu")
+    procedures = [s.get("procedure", "") for s in skills]
+    embeddings = model.encode(procedures, normalize_embeddings=True, show_progress_bar=False).astype("float32")
+
+    # Group indices by problem type
+    type_groups: dict[str, list[int]] = defaultdict(list)
+    for i, skill in enumerate(skills):
+        ptype = classify_skill_type(skill)
+        type_groups[ptype].append(i)
+
+    print(f"  Type-aware grouping: {', '.join(f'{t}({len(idxs)})' for t, idxs in sorted(type_groups.items()))}")
+
+    # Cluster within each type group using type-specific thresholds
+    all_clusters: list[list[int]] = []
+    for ptype, indices in type_groups.items():
+        threshold = TYPE_SIMILARITY_THRESHOLDS.get(ptype, similarity_threshold)
+        clusters = _greedy_cluster(skills, metrics, embeddings, indices, threshold)
+        all_clusters.extend(clusters)
+        n_merged = sum(1 for c in clusters if len(c) > 1)
+        if n_merged:
+            print(f"    {ptype}: {len(indices)} skills -> {len(clusters)} clusters (threshold={threshold})")
+
+    # For each cluster, keep the representative and merge keywords
     merged = []
-    for cluster in clusters:
+    for cluster in all_clusters:
         rep_idx = cluster[0]
         rep_skill = dict(skills[rep_idx])
+        rep_skill["_problem_type"] = classify_skill_type(skills[rep_idx])
 
         if len(cluster) > 1:
             all_keywords = set()
