@@ -2,7 +2,15 @@
   "permissions": {
     "allow": [
       "Bash(chmod +x scripts/run_5trials_complexlp.sh)",
-      "Bash(HF_HUB_OFFLINE=1 bash scripts/run_5trials_complexlp.sh)"
+      "Bash(HF_HUB_OFFLINE=1 bash scripts/run_5trials_complexlp.sh)",
+      "Bash(rm -rf outputs/qwen3_14b_aug_pipeline/*/traces.jsonl)",
+      "Bash(rm -rf outputs/qwen3_14b_aug_pipeline/*/verified_traces.jsonl)",
+      "Bash(rm -rf outputs/qwen3_14b_aug_pipeline/*/rejected_traces.jsonl)",
+      "Bash(rm -rf outputs/qwen3_14b_aug_pipeline/*/skills_raw.jsonl)",
+      "Bash(rm -rf outputs/qwen3_14b_aug_pipeline/*/predictions_train_loo.jsonl)",
+      "Bash(rm -rf outputs/qwen3_8b_think_code/*/)",
+      "Bash(nohup bash *)",
+      "Bash(echo \"8B Think+Code eval launched, PID=$!\")"
     ]
   }
 }

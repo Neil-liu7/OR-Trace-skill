@@ -95,6 +95,7 @@ async def call_llm(
     temperature: float = 0.7,
     max_tokens: int = 4096,
     enable_thinking: bool | None = None,
+    thinking_budget: int | None = None,
     timeout: int = 600,
     api_base_url: str = "",
     api_key: str = "",
@@ -113,6 +114,8 @@ async def call_llm(
         payload["max_tokens"] = max_tokens
     if enable_thinking is not None:
         payload["chat_template_kwargs"] = {"enable_thinking": enable_thinking}
+    if thinking_budget is not None:
+        payload["thinking"] = {"budget_tokens": thinking_budget}
 
     headers = {
         "Authorization": f"Bearer {key}",

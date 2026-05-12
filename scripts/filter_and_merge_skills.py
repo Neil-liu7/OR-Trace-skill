@@ -147,15 +147,15 @@ def classify_skill_type(skill: dict) -> str:
 # Per-type similarity thresholds: specialized types use higher thresholds
 # to preserve diversity; StandardLP uses default (more aggressive merge is OK)
 TYPE_SIMILARITY_THRESHOLDS: dict[str, float] = {
-    "TSP": 0.92,
-    "VRP": 0.92,
-    "NetworkFlow": 0.92,
-    "MultiPeriod": 0.90,
-    "Nonlinear": 0.90,
-    "Scheduling": 0.90,
-    "FacilityLocation": 0.90,
-    "Knapsack": 0.88,
-    "StandardLP": 0.85,
+    "TSP": 0.75,
+    "VRP": 0.75,
+    "NetworkFlow": 0.75,
+    "MultiPeriod": 0.75,
+    "Nonlinear": 0.75,
+    "Scheduling": 0.75,
+    "FacilityLocation": 0.75,
+    "Knapsack": 0.75,
+    "StandardLP": 0.70,
 }
 
 
